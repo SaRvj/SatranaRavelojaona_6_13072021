@@ -1,0 +1,29 @@
+body {
+	width: 100%;
+	max-width: 1300px;
+	min-width: 495px;
+	margin: auto;
+	background-color: white;
+	font-family: 'DM Sans', Arial, Verdana, sans-serif;
+	padding: 5px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+main{
+	@include just-flex;
+	width: 100%;
+	padding: 25px;
+	@include flex-wrap;
+	margin: auto;
+	@include justify-content-center;
+	@include tablet-style{@include justify-content-space-around;}
+	@include mobile-style{padding-top: 0px;}
+}
+
+h1{
+	font-weight: lighter;
+}
