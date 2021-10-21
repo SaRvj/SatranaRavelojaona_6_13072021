@@ -1,0 +1,63 @@
+/*couleurs*/
+/*modal & lightboxes*/
+/*breakpoint*/
+/*CONTENT STYLES*/
+/*IMAGES STYLE*/
+body {
+  width: 100%;
+  max-width: 1300px;
+  min-width: 495px;
+  margin: auto;
+  background-color: white;
+  font-family: "DM Sans", Arial, Verdana, sans-serif;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  padding: 25px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  main {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 820px) {
+  main {
+    padding-top: 0px;
+  }
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+/*couleurs*/
+/*modal & lightboxes*/
+/*breakpoint*/
+/*CONTENT STYLES*/
+/*IMAGES STYLE*/
+/*couleurs*/
+/*modal & lightboxes*/
+/*breakpoint*/
+
+/*# sourceMappingURL=style.css.map */

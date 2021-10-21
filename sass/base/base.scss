@@ -1,4 +1,6 @@
-body {
+@import "../utils/mixins.scss";
+
+body{
 	width: 100%;
 	max-width: 1300px;
 	min-width: 495px;

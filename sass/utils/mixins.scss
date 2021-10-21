@@ -1,5 +1,7 @@
+@import "../utils/variables.scss";
+
 @mixin tablet-style{
-	@media screen and(max-width: $break-tablet){
+	@media screen and(max-width:$break-tablet){
 		@content;
 	}
 }
@@ -11,7 +13,7 @@
 }
 
 @mixin truemobile-style{
-	@media screen and(max-width: $break-truemobile){
+	@media screen and(max-width:$break-truemobile){
 		@content;
 	}
 }
