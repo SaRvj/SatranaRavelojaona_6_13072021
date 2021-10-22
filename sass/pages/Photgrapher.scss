@@ -16,4 +16,18 @@ p{
 main{
     @include flex-column;
     padding: 0px;
-  }
+}
+
+.removable{
+    display: none;
+}
+
+/*informations sur le photographe*/
+.photographers{
+    margin: -10px 0px 0px 0px;
+    width: 100%;
+    background-color: $tertiary-bg-color;
+    @include just-flex;
+    @include justify-content-space-between;
+    @include flex-nowrap;
+}
