@@ -87,3 +87,18 @@ header{
         }
     }
 }
+
+/*informations sur les photographes*/
+.photographers{
+    @include justify-content-center;
+    @include flex-column;
+    margin: 20px;   
+    @include self-text-align;
+    width: 30%;
+    .name{
+      margin: 0px;
+      margin-top: 20px;
+      color: $primary-color;
+      font-size: 240%;
+    }
+}
