@@ -3,3 +3,12 @@ p{
     margin: 0px;
     @include self-text-align;
 }
+
+#logo{
+    @include just-flex;
+    position: relative;
+    min-width: 235px;
+    min-height: 46.5px;
+    padding: 10px 10px 10px 00px;
+    @include start-align;
+  }

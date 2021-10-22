@@ -438,6 +438,26 @@ p {
   align-content: center;
 }
 
+#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  min-width: 235px;
+  min-height: 46.5px;
+  padding: 10px 10px 10px 0px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 /*couleurs*/
 /*modal & lightboxes*/
 /*breakpoint*/
