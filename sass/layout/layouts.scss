@@ -50,5 +50,19 @@ header{
             height: auto;
           }
         }
+        nav{
+            z-index: 1;
+            @include just-flex;
+            @include justify-content-center;
+            @include self-text-align;
+            @include tablet-style{
+              -webkit-box-ordinal-group: 2;
+              -ms-flex-order: +1;
+              order: +1;
+              width: 100%;
+              @include justify-content-center;
+              @include self-text-align;
+            }
+        }
     }
 }
