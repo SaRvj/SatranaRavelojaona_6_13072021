@@ -534,6 +534,73 @@ main {
   font-size: 140%;
   margin-bottom: 10px;
 }
+.photographers #left-p-header .p-infos .tagdescription {
+  font-size: 110%;
+}
+.photographers #left-p-header .p-infos .tags {
+  font-size: 110%;
+  margin-top: 20px;
+  padding: 0px;
+  margin-left: -10px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 508px) {
+  .photographers #left-p-header .p-infos .tags {
+    font-size: 100%;
+  }
+}
+.photographers #left-p-header .p-infos p {
+  text-align: left;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+.photographers #left-p-header .p-contact {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-flex: 0.8;
+  -ms-flex: 0.8;
+  flex: 0.8;
+  min-width: 140px;
+  max-width: 140px;
+}
+@media screen and (max-width: 1199px) {
+  .photographers #left-p-header .p-contact {
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .photographers #left-p-header .p-contact {
+    max-width: unset;
+    position: fixed;
+    z-index: 99;
+    top: 92%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: unset;
+    margin: 0px;
+    font-size: 150%;
+    padding: 3px 15px 3px 15px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .photographers #left-p-header {
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .photographers #left-p-header {
+    padding: 0px;
+  }
+}
 
 /*couleurs*/
 /*modal & lightboxes*/
