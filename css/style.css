@@ -259,6 +259,60 @@ header #sub-header #logo img {
   width: 75%;
   height: auto;
 }
+header #sub-header nav {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  text-align: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+@media screen and (max-width: 1199px) {
+  header #sub-header nav {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    text-align: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+}
+@media screen and (max-width: 820px) {
+  header #sub-header nav {
+    width: 100%;
+    margin: 5px 50px 5px 50px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    text-align: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+  header #sub-header nav .tagportrait, header #sub-header nav .art, header #sub-header nav .fashion, header #sub-header nav .architecture,
+header #sub-header nav .travel, header #sub-header nav .sports, header #sub-header nav .animals, header #sub-header nav .events {
+    margin: 5px 8px 5px 8px;
+  }
+}
 
 /*couleurs*/
 /*modal & lightboxes*/

@@ -63,6 +63,14 @@ header{
               @include justify-content-center;
               @include self-text-align;
             }
+            @include mobile-style{
+                width: 100%;
+                margin: 5px 50px 5px 50px;
+                @include flex-wrap; 
+                @include self-text-align;
+                .tagportrait, .art, .fashion, .architecture,
+                .travel, .sports, .animals, .events{margin: 5px 8px 5px 8px;}
+            }
         }
     }
 }
