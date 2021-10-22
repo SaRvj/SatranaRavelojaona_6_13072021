@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 	
+	 	<meta charset="utf-8" />
+	    <title>Page Photographe</title>
+	    <meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+	</head>
+
+  <body>
+
+    <header>
+      <a id="content" href="#main-section" aria-label="Anchort to Main section"><p>Passer au contenu</p></a>
+      <div id="sub-header" aria-label="sub header">
+        <a id="logo" href="index.html" aria-label="sub header">
+          <img alt="Logo FishEye" src="./logo/logo.png">
+        </a>
+		</div>
+	 </header>
+
+   <main id="main-section" class="main-sec" aria-label="main section">
+
+    <!--informations sur le photographe-->
+    <section class="photographers"  aria-label="Photographers">
+      <div id="left-p-header">
+        <div class="p-infos"  aria-label="Photographer details">
+          <h1 class="name"  aria-label="Photographer name"></h1>
+          <p class="city country"  aria-label="Photographer location"></p>
+          <p class="tagline"  aria-label="Photographer tagline"></p>
+          <div class="tags"  aria-label="Photographer tags">
+            <a class="allTags" href="#">#All</a>            
+          </div>
+        </div>
+        <button type="button" class="p-contact button-type" title="Contact Me">Contactez-moi</button>
+ 			</div>
+ 			<div class="right-p-header ID">
+        <img src="#" alt="" class="portrait">
+      </div>
+    </section>
+
+    <!--1e modal: contact-->    
+ 		<div class="bground"  aria-label="Modal" aria-hidden="true" role="dialog">
+      <div class="content">
+        <p>Contactez-moi</p><br>
+        <p class="name modal-name"  aria-label="Photographer name"></p>
+        <span class="close" title="Close contact form" tabindex="0"  aria-label="close modal"></span>
+        <div class="modal-body"  aria-label="modal body">
+
+          <!--formulaire contact--> 
+          <form
+          class = "modal-form"
+          name="contact"
+          action="Photographers.html"
+          method="get"
+          onsubmit="validate();">
+
+            <!--prénom--> 
+            <div class="formData">
+                <label for="first" >Prénom</label><br>
+                <input
+                  class="text-control last"
+                  type="text"
+                  id="first"
+                  name="first"
+                  aria-label="Votre prénom"
+                  minlength="2" 
+                  required
+                /><br>                
+              </div>
+          
+            <!--nom--> 
+            <div class="formData">
+              <label for="last" >Nom</label><br>
+              <input
+                class="text-control last"
+                type="text"
+                id="last"
+                name="last"
+                aria-label="Votre Nom"
+                minlength="2" 
+                required
+              /><br>                
+            </div>
+
+            <!--email--> 
+            <div class="formData">
+              <label for="email" >Email</label><br>
+              <input
+                class="text-control email"
+                type="email"
+                id="email"
+                name="email"
+                aria-label="votre e-mail"
+                required
+              /><br>
+            </div>
+
+            <!--message--> 
+            <div class="formData">
+              <label for="message" >Votre message</label><br>
+              <textarea
+                class="text-control message"
+                id="message"
+                name="message"
+                aria-label="votre message"
+                wrap="soft"
+                required
+              ></textarea><br>
+            </div>
+
+            <input
+            	class="btn-submit button-type"
+              type="submit"
+              aria-label="send"
+              title= "send"
+              value="Envoyer"/>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--/////2e modal: confirmation--> 
+    <div class="bground2" role="dialog">
+      <div class="content2">
+        <div class="modal-body2">
+          <p>Merci !<br><br>Votre message<br>a été envoyé.</p>
+        </div>
+      </div>
+    </div>
+
+     <!--trier par menu déroulant-->
+    <section class="sorting" title="Order by">
+      <label for="sort-by">Trier par</label>
+      <select id="sort-by" class="button-type">
+        <option value="valeur1" selected >Popularité</option>
+        <option value="valeur2">Date</option>
+        <option value="valeur3">Titre</option>
+      </select>       
+    </section>
+
+    <!--section portfolo-->
+ 		<section class="portfolio"  aria-label="Photographer medias">
+
+      <!--lightbox modal-->
+        <div class="bground3"  aria-hidden="true" role="dialog">
+          <div class="content3" aria-label="image closeup view" role="dialog">
+            <!--flèche previous image-->
+            <div class="first-part">
+              <div class="back" title="Previous image" tabIndex = '0'></div>
+            </div>
+            <!--image zoomée-->
+            <div class="second-part">
+              <div class="media-ligthbox"></div>
+              <p id="media-title-ligthbox"></p>
+            </div>
+            <!--flèche next image-->
+            <div class="third-part">
+              <div class="close" title="Close dialog" tabindex="0"></div>
+              <div class="next" title="Next image" tabIndex = '0'></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+      <!--nombre de like-->
+      <div class="Gen-likes">
+        <div class="number-footer"></div>
+        <em class="fas fa-heart icon-heart icon-heart-plain" aria-hidden="true"></em>
+      </div>
+      <!--prix-->
+      <p class="price-footer price"></p>
+    </footer>
+
+    <!--javascript-->
+
+  </body>
+</html>
