@@ -36,5 +36,12 @@ main{
         -ms-flex:2;
         flex:3;
         @include just-flex;
+        .p-infos{
+            padding-left: 5px;
+            text-align: left;   
+            -webkit-box-flex:2;   
+            -ms-flex:2;   
+            flex:2;
+        }
     }
 }
