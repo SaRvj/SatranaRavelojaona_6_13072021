@@ -29,4 +29,21 @@ header{
         }
       } 
     }
+    #sub-header{
+        @include flex-wrap; 
+        margin: auto;
+        @include self-text-align;
+        @include just-flex;
+        @include justify-content-space-between;
+        @include tablet-style{@include justify-content-space-around;}
+        @include tablet-style{@include justify-content-space-between;}
+        #logo{
+          @include just-flex;
+          @include mobile-style{
+            width: 40%;
+            min-width: 235px;
+            min-height: 46.5px;
+          }
+        }
+    }
 }
