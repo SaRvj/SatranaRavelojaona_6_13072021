@@ -55,6 +55,15 @@ main{
             .tagdescription{
                 font-size: 110%;
             }
+            .tags{
+                font-size: 110%;
+                margin-top: 20px;
+                padding: 0px;
+                margin-left: -10px;
+                @include flex-nowrap;
+                @include start-align;
+                @include truemobile-style{font-size: 100%;}
+              }
         }
     }
 }
