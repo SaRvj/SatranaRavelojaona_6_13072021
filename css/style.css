@@ -254,6 +254,11 @@ header #sub-header #logo {
     min-height: 46.5px;
   }
 }
+header #sub-header #logo img {
+  position: absolute;
+  width: 75%;
+  height: auto;
+}
 
 /*couleurs*/
 /*modal & lightboxes*/
