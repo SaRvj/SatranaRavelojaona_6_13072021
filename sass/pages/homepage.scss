@@ -1,0 +1,10 @@
+/*logo*/
+#logo{
+	@include just-flex;
+	position: relative;
+	min-width: 315px;
+	min-height: 62px;
+	padding: 10px;
+	@include self-text-align;
+	@include justify-content-center;
+}
