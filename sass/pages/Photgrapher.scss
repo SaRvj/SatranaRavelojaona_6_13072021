@@ -30,4 +30,11 @@ main{
     @include just-flex;
     @include justify-content-space-between;
     @include flex-nowrap;
+    #left-p-header{
+        padding: 35px 25px 25px 50px;
+        -webkit-box-flex:2;
+        -ms-flex:2;
+        flex:3;
+        @include just-flex;
+    }
 }
