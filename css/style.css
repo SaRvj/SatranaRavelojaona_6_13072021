@@ -382,6 +382,16 @@ header #sub-header #Our-Photographers {
   color: #D3573C;
   font-size: 240%;
 }
+.photographers p {
+  margin: 0px;
+  margin-top: 2px;
+}
+.photographers .city, .photographers .country {
+  margin: 0px;
+  margin-bottom: 3px;
+  color: #901C1C;
+  font-weight: 600;
+}
 
 /*couleurs*/
 /*modal & lightboxes*/
