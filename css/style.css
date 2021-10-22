@@ -154,6 +154,57 @@ h1 {
   }
 }
 
+/*HEADER*/
+header {
+  width: 99%;
+  padding: 1px;
+  margin: auto;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  text-align: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+header:hover #content, header:active #content {
+  visibility: visible;
+}
+header #content {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+header #content p {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #D3573C;
+  margin: 0px;
+  padding: 3px;
+  text-align: center;
+  margin-bottom: -20px;
+}
+header #content p:hover, header #content p:active {
+  color: white;
+  background-color: #901C1C;
+}
+
 /*couleurs*/
 /*modal & lightboxes*/
 /*breakpoint*/
