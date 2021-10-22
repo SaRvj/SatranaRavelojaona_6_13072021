@@ -70,5 +70,37 @@ main{
                 align-self: flex-start;
             } 
         }
+        .p-contact{
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+            -webkit-box-flex:0.8;
+            -ms-flex:0.8;
+            flex:0.8;
+            min-width: 140px;
+            max-width: 140px;
+            @include tablet-style{
+                margin-left: 15px;
+            }    
+            @include mobile-style{
+              max-width: unset;
+              position: fixed;
+              z-index: 99;
+              top: 92%;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              width: unset;
+              margin: 0px;
+              font-size: 150%;
+              padding: 3px 15px 3px 15px;
+            }    
+        }
+        @include tablet-style{
+            padding: 25px;
+        } 
+        @include mobile-style{
+            padding: 0px;
+        }   
     }
 }
