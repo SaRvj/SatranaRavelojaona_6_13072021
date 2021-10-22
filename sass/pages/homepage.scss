@@ -8,3 +8,16 @@
 	@include self-text-align;
 	@include justify-content-center;
 }
+
+/*photographes*/
+.photographers{
+	.ID{
+		cursor: pointer;
+		&:hover{
+			.portrait{
+				-webkit-box-shadow: 1px 1px 8px $tertiary-color;
+				box-shadow: 1px 1px 8px $tertiary-color;
+			}
+		}
+	}
+}
