@@ -11,4 +11,9 @@ p{
     min-height: 46.5px;
     padding: 10px 10px 10px 00px;
     @include start-align;
+}
+
+main{
+    @include flex-column;
+    padding: 0px;
   }
