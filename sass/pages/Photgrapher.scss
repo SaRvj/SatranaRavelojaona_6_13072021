@@ -498,5 +498,17 @@ footer{
             padding-left: 15px;
             font-weight: 600;
         }
+        .modal-body{
+            padding: 15px 40px 15px 20px;
+            margin: 15px auto;
+            label{
+                font-size: 200%;
+                display: inline-block;
+                margin-top: 11px;
+                @include truemobile-style{
+                    margin: 11px 0px 11px 0px;
+                }
+            }
+        }
     }
 }
