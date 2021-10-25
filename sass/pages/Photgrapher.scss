@@ -119,5 +119,10 @@ main{
             padding: 0px;
             @include flex-nowrap;
         } 
+        @include truemobile-style{
+            padding: 0px;
+            @include flex-row-centered;
+            @include justify-content-center;
+        }
     }
 }
