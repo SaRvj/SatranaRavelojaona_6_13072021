@@ -440,5 +440,19 @@ footer{
                 font-size: 120%;
             }
         }
+        @include mobile-style{
+            width: auto;
+            height: auto;
+            max-width: 700px;
+            max-height: 600px;
+            min-width: 500px;
+            min-height: 400px;
+            .close{
+                right: 0px;
+            }
+            .media-title{
+                font-size: 80%;
+            }
+        }
     }
 }
