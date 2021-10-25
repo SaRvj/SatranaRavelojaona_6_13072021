@@ -268,4 +268,10 @@ main{
             margin: 0px 15px 0px 15px;
         }
     }
+    @include tablet-style{
+        @include justify-content-space-around;
+    }
+    @include mobile-style{
+        @include justify-content-center;
+    }
 }
