@@ -394,5 +394,23 @@ footer{
                 }
             }
         }
+        .second-part{
+            @include flex-column;
+            -webkit-box-flex: 17;
+            -ms-flex: 17;
+            flex: 17;
+            overflow: hidden;
+            .media-ligthbox{
+                -webkit-box-flex:16;
+                -ms-flex:16;
+                flex:16;
+                border-radius: 5px;
+                overflow: hidden;
+                #image-lightbox{
+                    @include image-ligthBox;    
+                    overflow: hidden;
+                }
+            }
+        }
     }
 }
