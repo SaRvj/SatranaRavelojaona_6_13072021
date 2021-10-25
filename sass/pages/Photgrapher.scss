@@ -326,4 +326,26 @@ footer{
     width: 100%;
     overflow: auto;
     background-color: $opaque-lighbox-bg;
+    .content3{
+        overflow: hidden;
+        margin: auto;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 1135px;
+        height: 850px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-animation-name: modalopen;
+        animation-name: modalopen;
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        background-color: $around-modal-bg-color;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        @include just-flex;
+        @include justify-content-space-around;
+    }
 }
