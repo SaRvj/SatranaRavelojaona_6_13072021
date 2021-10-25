@@ -220,5 +220,17 @@ main{
                 box-shadow: 1px 1px 8px $tertiary-color;
             }
         }
+        .down-media{
+            padding: 5px 0px 5px 0px;
+            margin-bottom: 10px;
+            @include just-flex;
+            @include justify-content-space-between;
+            .media-title{
+              color: $secondary-color;
+              margin: 0px;
+              font-size: 130%;
+              font-weight: 600;
+            }
+        }
     }
 }
