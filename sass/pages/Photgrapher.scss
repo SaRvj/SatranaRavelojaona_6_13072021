@@ -468,4 +468,14 @@ footer{
     width: 100%;
     overflow: auto;
     background-color: $around-modal-bg-color;
+    .content2{
+        height: 100%;
+        max-height: 500px;
+        @include just-flex;
+        @include justify-content-center;
+        top: 40%;
+        -webkit-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+        transform: translateY(-40%);
+    }
 }
