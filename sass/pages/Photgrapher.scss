@@ -124,5 +124,22 @@ main{
             @include flex-row-centered;
             @include justify-content-center;
         }
+        .portrait{
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+            @include portrait-style-page;
+            @include mobile-style{
+              padding: 0px;
+              @include flex-nowrap;
+              margin:10px 25px 10px 10px;
+              height: 170px;
+              width: 170px;
+              min-width: 170px;     
+            }
+             @include truemobile-style{
+              @include self-text-align;
+              margin: auto;
+            }
+        }
     }
 }
