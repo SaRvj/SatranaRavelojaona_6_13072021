@@ -114,5 +114,10 @@ main{
           min-width: 273px;
           @include flex-nowrap;
         }
+        @include mobile-style{
+            min-width: unset;
+            padding: 0px;
+            @include flex-nowrap;
+        } 
     }
 }
