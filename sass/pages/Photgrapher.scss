@@ -253,6 +253,10 @@ main{
                   margin-left: 5px;
                   @include self-text-align;
                 }
+                .icon-heart{
+                    font-size: 95%;
+                    pointer-events: none;
+                }
             }
         }
     }
