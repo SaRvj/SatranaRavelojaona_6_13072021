@@ -257,6 +257,11 @@ main{
                     font-size: 95%;
                     pointer-events: none;
                 }
+                &:hover{
+                    .icon-heart, .number{
+                        color: $primary-color;
+                    }
+                }
             }
         }
     }
