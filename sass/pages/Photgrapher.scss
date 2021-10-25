@@ -296,4 +296,8 @@ footer{
     font-size:140%;
     color: black;
     font-weight: bold;
+    .Gen-likes{
+        @include just-flex;
+        @include self-text-align;
+    }
 }
