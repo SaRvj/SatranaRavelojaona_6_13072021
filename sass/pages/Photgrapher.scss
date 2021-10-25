@@ -314,3 +314,16 @@ footer{
         display: none;
     }
 }
+
+/*lightbox modal*/
+.bground3{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: $opaque-lighbox-bg;
+}
