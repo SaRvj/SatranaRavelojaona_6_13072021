@@ -176,3 +176,12 @@ main{
         width: 125px;
     }
 }
+
+/*portfolio*/
+.portfolio{
+    @include flex-wrap;
+    padding-top: 15px;
+    margin-bottom: 50px;
+    @include just-flex;
+    @include justify-content-space-around;
+}
