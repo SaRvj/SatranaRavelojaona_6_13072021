@@ -127,4 +127,19 @@ header{
       @include self-text-align;    
     }
   }
+  @include tablet-style{
+    .tags{
+      @include just-flex;
+      @include flex-wrap; 
+      @include justify-content-center;
+      padding: 5px; 
+      .tagportrait, .art, .fashion, .architecture,
+      .travel, .sports, .animals, .events, .allTags{
+        margin: 5px;
+      }
+    }
+  }
+  @include mobile-style{
+    width: 100%;
+  }
 }
