@@ -299,5 +299,8 @@ footer{
     .Gen-likes{
         @include just-flex;
         @include self-text-align;
+        .number, .number-footer{
+            margin-right: 10px;
+        }
     }
 }
