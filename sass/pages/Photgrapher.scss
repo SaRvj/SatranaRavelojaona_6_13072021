@@ -240,6 +240,20 @@ main{
             .media-date{
                 color: lightgray;
             }
+            .likes{
+                z-index: 2;
+                cursor: pointer;
+                @include just-flex;
+                @include justify-content-space-between;
+                .number, .number-footer{
+                  color: $secondary-color;
+                  font-weight: bold;
+                  pointer-events: none;
+                  font-size: 100;
+                  margin-left: 5px;
+                  @include self-text-align;
+                }
+            }
         }
     }
 }
