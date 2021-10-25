@@ -456,3 +456,16 @@ footer{
         }
     }
 }
+
+/*form modal: contact*/
+.bground, .bground2{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: $around-modal-bg-color;
+}
