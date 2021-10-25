@@ -1105,6 +1105,18 @@ footer .Gen-likes .price {
     height: 22px;
   }
 }
+.bground3 .content3 .first-part .back, .bground3 .content3 .third-part .back {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.bground3 .content3 .first-part .next, .bground3 .content3 .third-part .next {
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  cursor: pointer;
+}
 
 /*couleurs*/
 /*modal & lightboxes*/
