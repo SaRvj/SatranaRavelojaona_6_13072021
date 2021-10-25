@@ -347,5 +347,14 @@ footer{
         position: relative;
         @include just-flex;
         @include justify-content-space-around;
+        .first-part, .third-part{
+            z-index: 101;
+            @include flex-column;
+            @include justify-content-center;
+            -webkit-box-flex: 2;
+            -ms-flex: 2;
+            flex: 2;
+            background-color: $transparent-lighbox-bg;
+        }
     }
 }
