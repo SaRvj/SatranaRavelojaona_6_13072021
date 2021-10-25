@@ -187,5 +187,21 @@ main{
     .media{
         margin: 15px;
         @include flex-column;
+        .up-media{
+            z-index: 1;
+            position: relative;
+            cursor: pointer;
+            width: 360px;
+            height: 324px;
+            border-radius: 5px;  
+            @include mobile-style{
+             width: 400px;
+             height: 240px;
+            }
+            @include truemobile-style{
+            width: 485px;
+            height: 297px;
+            }
+        }
     }
 }
