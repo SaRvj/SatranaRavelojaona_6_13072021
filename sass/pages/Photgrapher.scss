@@ -162,4 +162,11 @@ main{
     @include truemobile-style{
         display: none;
     }
+    label{
+        font-weight: bold;
+        margin-right: 20px;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
 }
