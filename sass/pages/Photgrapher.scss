@@ -369,17 +369,23 @@ footer{
                 float: left;
                 -webkit-box-shadow: -4px 4px 0 $secondary-color;
                 box-shadow: -4px 4px 0 $secondary-color;
-                @include mobile-style{
-                    width: 22px;
-                    height: 22px;
+                    @include mobile-style{
+                        width: 22px;
+                        height: 22px;
+                    }
+            }
+                .back{
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    cursor: pointer;
                 }
-            }
-            .back{
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
+                .next{
+                -webkit-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
                 cursor: pointer;
-            }
+                }
         }
     }
 }
