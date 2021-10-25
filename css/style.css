@@ -393,6 +393,9 @@ header #sub-header #Our-Photographers {
   color: #901C1C;
   font-weight: 600;
 }
+.photographers .tagline {
+  font-weight: 550;
+}
 
 /*logo*/
 #logo {
