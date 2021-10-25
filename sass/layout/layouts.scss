@@ -117,5 +117,14 @@ header{
   .price{
     margin-bottom: 10px;
     color: grey;
-  } 
+  }
+  .ID{
+    display: none;
+    @include justify-content-center;
+    @include flex-column;
+    .portrait{
+      @include portrait-style;
+      @include self-text-align;    
+    }
+  }
 }
