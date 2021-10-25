@@ -310,4 +310,7 @@ footer{
             margin: 0px;
         }
     }
+    @include mobile-style{
+        display: none;
+    }
 }
