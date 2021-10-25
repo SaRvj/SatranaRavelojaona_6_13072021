@@ -231,6 +231,15 @@ main{
               font-size: 130%;
               font-weight: 600;
             }
+            .media-date, .media-price{
+                color: black;
+                margin: 0px;
+                margin-left: 5px;
+                font-size: 70%;
+            }
+            .media-date{
+                color: lightgray;
+            }
         }
     }
 }
