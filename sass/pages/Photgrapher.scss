@@ -478,4 +478,18 @@ footer{
         -ms-transform: translateY(-40%);
         transform: translateY(-40%);
     }
+    .content, .content2{
+        margin: 5% auto;
+        width: 100%;
+        max-width: 500px;
+        -webkit-animation-name: modalopen;
+        animation-name: modalopen;
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        background: $primary-color;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        padding-top: 20px;
+    }
 }
