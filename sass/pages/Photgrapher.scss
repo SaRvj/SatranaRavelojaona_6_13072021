@@ -264,5 +264,8 @@ main{
                 }
             }
         }
+        @include mobile-style{
+            margin: 0px 15px 0px 15px;
+        }
     }
 }
