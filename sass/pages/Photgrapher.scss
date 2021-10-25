@@ -103,4 +103,16 @@ main{
             padding: 0px;
         }   
     }
+    .right-p-header{
+        padding: 25px 35px 25px 25px;
+        @include flex-row-end;
+        -webkit-box-flex:2;
+        -ms-flex:2;
+        flex:2;
+        @include tablet-style{
+          padding: 0px 35px 25px 25px;
+          min-width: 273px;
+          @include flex-nowrap;
+        }
+    }
 }
