@@ -49,3 +49,6 @@ for (let i in fishPhotog){
         newPhotographer.createAndDisplayTags();
     }
 }
+
+//Ecouter les clics sur les tags et afficher les atgs sélectionnés
+sortingMediaTags(); 
