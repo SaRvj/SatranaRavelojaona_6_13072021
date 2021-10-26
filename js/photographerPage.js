@@ -50,5 +50,8 @@ for (let i in fishPhotog){
     }
 }
 
-//Ecouter les clics sur les tags et afficher les atgs sélectionnés
+//Ecouter les clics sur les tags et afficher les tags sélectionnés
 sortingMediaTags(); 
+
+//mis en place modals and lighboxes
+setModals();
