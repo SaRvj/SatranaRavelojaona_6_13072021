@@ -15,3 +15,9 @@ let targetId = url.searchParams.get("id");
 
 //récupérer Data Json
 let fishData = await myFetch();
+
+//récupérer les infos ds photographes 
+let fishPhotog = fishData.photographers;
+
+//récupérer photos medias des photographes 
+let fishMedia = fishData.media;
