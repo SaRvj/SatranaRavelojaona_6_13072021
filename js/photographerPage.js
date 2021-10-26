@@ -12,3 +12,6 @@ let myUrl = window.location.href;
 let url_string = (window.location.href);
 let url = new URL(url_string);
 let targetId = url.searchParams.get("id");
+
+//récupérer Data Json
+let fishData = await myFetch();
