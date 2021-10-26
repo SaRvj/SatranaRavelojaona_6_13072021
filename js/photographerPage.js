@@ -55,3 +55,6 @@ sortingMediaTags();
 
 //mis en place modals and lighboxes
 setModals();
+
+//calcul des totaux des likes
+totalOfLikes();
