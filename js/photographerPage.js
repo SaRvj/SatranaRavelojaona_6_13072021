@@ -41,5 +41,8 @@ for (let i in fishPhotog){
           newPhotographer.media.push(fishMedia[i]);
         }
     }
+
+    //création des éléments du DOM pour les medias des Photographes 
+    newPhotographer.createAndDisplayPhotographerInfos();
     }
 }
