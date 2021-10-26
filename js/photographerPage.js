@@ -21,3 +21,18 @@ let fishPhotog = fishData.photographers;
 
 //récupérer photos medias des photographes 
 let fishMedia = fishData.media;
+
+//instancier une class pour chaque photographe
+for (let i in fishPhotog){
+    if(fishPhotog[i].id == targetId){
+      let newPhotographer = new Photographer(
+        fishPhotog[i].name,
+        fishPhotog[i].id,
+        fishPhotog[i].city,
+        fishPhotog[i].country,
+        fishPhotog[i].tags,
+        fishPhotog[i].tagline,
+        fishPhotog[i].price,
+        fishPhotog[i].portrait
+    );}
+}
