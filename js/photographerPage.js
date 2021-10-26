@@ -34,15 +34,18 @@ for (let i in fishPhotog){
         fishPhotog[i].tagline,
         fishPhotog[i].price,
         fishPhotog[i].portrait
-    );
-    //récupérer et afficher les médias de ID Photographe
-    for (let i in fishMedia){
+        );
+        //récupérer et afficher les médias de ID Photographe
+        for (let i in fishMedia){
         if(fishMedia[i].photographerId == newPhotographer.id){
-          newPhotographer.media.push(fishMedia[i]);
+            newPhotographer.media.push(fishMedia[i]);
+            }
         }
-    }
 
-    //création des éléments du DOM pour les medias des Photographes 
-    newPhotographer.createAndDisplayPhotographerInfos();
+        //création des éléments du DOM pour les medias des Photographes 
+        newPhotographer.createAndDisplayPhotographerInfos();
+
+        //créer et afficher les tags
+        newPhotographer.createAndDisplayTags();
     }
 }
