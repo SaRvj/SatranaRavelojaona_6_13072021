@@ -34,5 +34,12 @@ for (let i in fishPhotog){
         fishPhotog[i].tagline,
         fishPhotog[i].price,
         fishPhotog[i].portrait
-    );}
+    );
+    //récupérer et afficher les médias de ID Photographe
+    for (let i in fishMedia){
+        if(fishMedia[i].photographerId == newPhotographer.id){
+          newPhotographer.media.push(fishMedia[i]);
+        }
+    }
+    }
 }
