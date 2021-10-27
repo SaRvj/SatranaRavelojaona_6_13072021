@@ -37,5 +37,22 @@ function MediaFactory(thatMedia){
         likes.appendChild(heart);
         media.appendChild(thisMediaTags);
         media.appendChild(hidenTitle); 
+
+        //assiger des class et des id aux éléments du Dom
+        media.classList.add("media");
+        upMedia.classList.add("up-media");
+        image.classList.add("media-img");
+        downMedia.classList.add("down-media");
+        mediaTitle.classList.add("media-title");
+        mediaDate.classList.add("media-date", "removable");
+        mediaPrice.classList.add("media-price", "removable");    
+        likes.classList.add("likes");      
+        number.classList.add("number");
+        heart.classList.add("fas", "fa-heart", "icon-heart", "icon-heart-plain");
+        hidenTitle.classList.add("removable");
+        media.id = "IMAGE";   
+        upMedia.id = thatMedia.date; 
+        image.id = thatMedia.title;      
+        hidenTitle.id = thatMedia.title;
     }
 }
