@@ -54,5 +54,16 @@ function MediaFactory(thatMedia){
         upMedia.id = thatMedia.date; 
         image.id = thatMedia.title;      
         hidenTitle.id = thatMedia.title;
+
+        //pour paraméter les innerHTML, sources, alt, arialabel, Tabindex...
+        image.tabIndex = '0';   
+        likes.tabIndex = '0';
+        likes.ariaLabel ="likes";
+        image.alt = thatMedia.depiction;
+        number.innerHTML = thatMedia.likes;
+        mediaDate.innerHTML = thatMedia.date;    
+        mediaTitle.innerHTML = thatMedia.title;     
+        mediaPrice.innerHTML = thatMedia.price + "€";
+        image.src = "./pictures/" + thatMedia.photographerId + "/" + thatMedia.image;
     }
 }
