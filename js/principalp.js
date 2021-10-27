@@ -19,10 +19,10 @@ const main = async () =>{
             fishPhotog[i].tags,
             fishPhotog[i].tagline,
             fishPhotog[i].price,
-        fishPhotog[i].portrait
+            fishPhotog[i].portrait
         );    
   
-        //créer les élements du DOM à partir dse infos des photographes
+        //créer les élements du DOM à partir des infos des photographes
         newPhotographer.createAndDisplayPhotographerCard(main);
     } 
   

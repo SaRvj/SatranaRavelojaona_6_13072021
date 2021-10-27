@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/SaRvj/SatranaRavelojaona_6_13072021/issues"
   },
-  "homepage": "https://github.com/SaRvj/SatranaRavelojaona_6_13072021#readme"
+  "homepage": "https://github.com/SaRvj/SatranaRavelojaona_6_13072021#readme",
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  },
+  "dependencies": {}
 }
