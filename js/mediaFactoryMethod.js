@@ -5,4 +5,10 @@ function MediaFactory(thatMedia){
     } else if(thatMedia.hasOwnProperty('video')){
         return createVideos();
     }
+
+    function createImages(){
+        //récupérer les éléments du DOM
+        let portfolio = document.querySelector(".portfolio");
+    
+    }
 }
