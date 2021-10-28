@@ -6,6 +6,7 @@ function MediaFactory(thatMedia){
         return createVideos();
     }
 
+    //créer et afficher les images de media
     function createImages(){
         //récupérer les éléments du DOM
         let portfolio = document.querySelector(".portfolio");
@@ -77,5 +78,41 @@ function MediaFactory(thatMedia){
             thisMediaTags.id = (thoseTags[i]);
             }
         }
+    }
+
+    //créer et afficher les vidéos de media
+    function createVideos(){
+        //récupérer les éléments du DOM
+        let portfolio = document.querySelector(".portfolio");
+
+        //création d'élement sur le DOM: injecter des balises dans html
+        let media = document.createElement('article');
+        let upMedia = document.createElement('div');
+        let video = document.createElement('video');  
+        let downMedia = document.createElement('div');
+        let mediaTitle = document.createElement('p');
+        let mediaDate = document.createElement('p');
+        let mediaPrice = document.createElement('p');
+        let likes = document.createElement('div');
+        let number = document.createElement('div');
+        let heart = document.createElement('i');
+        let playIcon = document.createElement('img');
+        let thisMediaTags = document.createElement('div');
+        let hidenTitle = document.createElement('div');
+
+        //appending du DOM: on dit à un élément qu'il a un enfant
+        portfolio.appendChild(media);
+        media.appendChild(upMedia);
+        upMedia.appendChild(video);
+        media.appendChild(downMedia);
+        downMedia.appendChild(mediaTitle);
+        downMedia.appendChild(mediaDate);
+        downMedia.appendChild(mediaPrice);
+        downMedia.appendChild(likes);
+        likes.appendChild(number);
+        likes.appendChild(heart);
+        upMedia.appendChild(playIcon); 
+        media.appendChild(thisMediaTags);
+        media.appendChild(hidenTitle); 
     }
 }
