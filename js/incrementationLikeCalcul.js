@@ -36,4 +36,28 @@ function incrementLikes() {
     likeButtons.forEach((btn) => btn.addEventListener("keyup", increaseNumber2));
 
     let time = 0;
+    function increaseNumber() {
+        if(time == 0){
+            let newNumberTarget = e.target.firstChild;   
+            let likeButton = e.target.firstChild.innerText;  
+            newNumber = parseInt(likeButton);
+            newNumber++;
+            NewText = newNumber.toString();
+            newNumberTarget.innerHTML = NewText;
+            time = 1;
+            //pour calculer et afficher le total de like du photographe
+            totalOfLikes();
+        }
+        else if (time == 1){
+            let newNumberTarget = e.target.firstChild;   
+            let likeButton = e.target.firstChild.innerText;  
+            newNumber = parseInt(likeButton);
+            newNumber--;
+            NewText = newNumber.toString();
+            newNumberTarget.innerHTML = NewText;
+            time = 0;
+            //pour calculer et afficher le total de like du photographe
+            totalOfLikes();
+        }
+    }
 }
