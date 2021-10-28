@@ -64,6 +64,6 @@ function MediaFactory(thatMedia){
         mediaDate.innerHTML = thatMedia.date;    
         mediaTitle.innerHTML = thatMedia.title;     
         mediaPrice.innerHTML = thatMedia.price + "€";
-        image.src = "./pictures/" + thatMedia.photographerId + "/" + thatMedia.image;
+        image.src = "./pictures/photographerPhoto/photographersIdPhotos/" + thatMedia.photographerId + "/" + thatMedia.image;
     }
 }
