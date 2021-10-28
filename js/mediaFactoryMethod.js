@@ -132,6 +132,29 @@ function MediaFactory(thatMedia){
         media.id = "VIDEO";
         upMedia.id = thatMedia.date;
         hidenTitle.id = thatMedia.title;
-        
+
+        //pour paraméter les innerHTML, sources, alt, arialabel, Tabindex...
+        video.title = thatMedia.depiction;
+        video.tabIndex = '0';        
+        video.src = "./pictures/photographePhoto/" + thatMedia.photographerId + "/" + thatMedia.video;
+        mediaTitle.innerHTML = thatMedia.title;
+        mediaDate.innerHTML = thatMedia.date;      
+        mediaPrice.innerHTML = thatMedia.price + "€";
+        likes.tabIndex = '0';
+        number.innerHTML = thatMedia.likes;
+        playIcon.src = "./pictures/playIcon/playButton.png";
+        playIcon.alt = "video";
+
+        //récupérer les tags de media 
+        let thoseTags = thatMedia.tags;    
+        for( let i in thoseTags){
+            thisMediaTags.classList.add("removable");
+            if(thoseTags[i] === "portrait"){
+                thisMediaTags.id = ("tagportrait");
+            }
+            else {
+                thisMediaTags.id = (thoseTags[i]);
+            }
+        }
     }
 }
