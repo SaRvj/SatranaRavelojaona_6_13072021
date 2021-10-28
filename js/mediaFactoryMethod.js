@@ -111,8 +111,27 @@ function MediaFactory(thatMedia){
         downMedia.appendChild(likes);
         likes.appendChild(number);
         likes.appendChild(heart);
-        upMedia.appendChild(playIcon); 
+        upMedia.appendChild(playIcon);
         media.appendChild(thisMediaTags);
-        media.appendChild(hidenTitle); 
+        media.appendChild(hidenTitle);
+
+        //assiger des class et des id aux éléments du Dom
+        media.classList.add("media");
+        upMedia.classList.add("up-media");
+        video.classList.add("media-vid");
+        downMedia.classList.add("down-media");      
+        mediaTitle.classList.add("media-title");
+        mediaDate.classList.add("media-date", "removable");
+        mediaPrice.classList.add("media-price",  "removable");
+        likes.classList.add("likes"); 
+        number.classList.add("number");
+        heart.classList.add("fas", "fa-heart", "icon-heart", "icon-heart-plain");
+        playIcon.classList.add("play-icon");
+        hidenTitle.classList.add("removable");
+        video.id = thatMedia.title; 
+        media.id = "VIDEO";
+        upMedia.id = thatMedia.date;
+        hidenTitle.id = thatMedia.title;
+        
     }
 }
