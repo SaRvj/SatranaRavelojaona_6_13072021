@@ -36,12 +36,13 @@ function incrementLikes() {
     likeButtons.forEach((btn) => btn.addEventListener("keyup", increaseNumber2));
 
     let time = 0;
+    //faire augmenter les nombres
     function increaseNumber() {
         if(time == 0){
             let newNumberTarget = e.target.firstChild;   
             let likeButton = e.target.firstChild.innerText;  
             newNumber = parseInt(likeButton);
-            newNumber++;
+            newNumber++; //incrément
             NewText = newNumber.toString();
             newNumberTarget.innerHTML = NewText;
             time = 1;
@@ -52,12 +53,40 @@ function incrementLikes() {
             let newNumberTarget = e.target.firstChild;   
             let likeButton = e.target.firstChild.innerText;  
             newNumber = parseInt(likeButton);
-            newNumber--;
+            newNumber--; //décrement
             NewText = newNumber.toString();
             newNumberTarget.innerHTML = NewText;
             time = 0;
             //pour calculer et afficher le total de like du photographe
             totalOfLikes();
+        }
+    }
+
+    //faire augmenter les nombres
+    function increaseNumber2() {
+        if (e.keyCode === 13) {
+            if(time == 0){
+                let newNumberTarget = e.target.firstChild;   
+                let likeButton = e.target.firstChild.innerText;  
+                newNumber = parseInt(likeButton);
+                newNumber++;
+                NewText = newNumber.toString();
+                newNumberTarget.innerHTML = NewText;
+                //pour calculer et afficher le total de like du photographe
+                totalOfLikes();
+                time = 1;
+            }
+            else if(time == 1){
+                let newNumberTarget = e.target.firstChild;   
+                let likeButton = e.target.firstChild.innerText;  
+                newNumber = parseInt(likeButton);
+                newNumber--;
+                NewText = newNumber.toString();
+                newNumberTarget.innerHTML = NewText;
+                //pour calculer et afficher le total de like du photographe
+                totalOfLikes();
+                time = 0;
+            }
         }
     }
 }
