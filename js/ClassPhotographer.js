@@ -38,7 +38,7 @@ class Photographer {
       photoSection.appendChild(aside2);
   
       //ajout au DOM
-      focusPortrait.src = "./Ressources/Photos/" + this.id + "/" + this.portrait;
+      focusPortrait.src = "./pictures/photographerPhoto/photographersIdPhotos/" + this.id + "/" + this.portrait;
       focusPortrait.alt = this.name;
       focusName.innerHTML = this.name;     
       p1.innerHTML = this.city + ", " + this.country ; 
@@ -87,7 +87,7 @@ class Photographer {
       modalName.innerHTML = this.name;
       location.innerHTML = this.city + ", " + this.country;
       tagline.innerHTML = this.tagline;    
-      portrait.src = "./Ressources/Photos/" + this.id + "/" + this.portrait;
+      portrait.src = "./pictures/photographerPhoto/photographersIdPhotos/" + this.id + "/" + this.portrait;
       portrait.alt = this.name;
       price.innerHTML = this.price + "€ /jour";
       document.title = this.name;
