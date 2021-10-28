@@ -24,3 +24,16 @@ function totalOfLikes() {
     //tri par popularité
     listenToMenu();
 }
+
+
+//incrémentation des likes de média et le nombre total de likes au clic
+function incrementLikes() {
+    //récupérer les éléments du DOM
+    const likeButtons = document.querySelectorAll(".likes");
+
+    //faire augmenter les nombres
+    likeButtons.forEach((btn) => btn.addEventListener("click", increaseNumber));
+    likeButtons.forEach((btn) => btn.addEventListener("keyup", increaseNumber2));
+
+    let time = 0;
+}
