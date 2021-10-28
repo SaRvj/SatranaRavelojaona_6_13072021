@@ -65,7 +65,7 @@ function MediaFactory(thatMedia){
         mediaDate.innerHTML = thatMedia.date;    
         mediaTitle.innerHTML = thatMedia.title;     
         mediaPrice.innerHTML = thatMedia.price + "€";
-        image.src = "./pictures/photographerPhoto/photographersIdPhotos/" + thatMedia.photographerId + "/" + thatMedia.image;
+        image.src = "./pictures/photographerPhoto/" + thatMedia.photographerId + "/" + thatMedia.image;
 
         //récupérer les tags de media      
         let thoseTags = thatMedia.tags;    
@@ -136,7 +136,7 @@ function MediaFactory(thatMedia){
         //pour paraméter les innerHTML, sources, alt, arialabel, Tabindex...
         video.title = thatMedia.depiction;
         video.tabIndex = '0';        
-        video.src = "./pictures/photographePhoto/" + thatMedia.photographerId + "/" + thatMedia.video;
+        video.src = "./pictures/photographerPhoto/" + thatMedia.photographerId + "/" + thatMedia.video;
         mediaTitle.innerHTML = thatMedia.title;
         mediaDate.innerHTML = thatMedia.date;      
         mediaPrice.innerHTML = thatMedia.price + "€";
