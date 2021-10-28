@@ -136,7 +136,7 @@ function MediaFactory(thatMedia){
         //pour paraméter les innerHTML, sources, alt, arialabel, Tabindex...
         video.title = thatMedia.depiction;
         video.tabIndex = '0';        
-        video.src = "./pictures/photographerPhoto/" + thatMedia.photographerId + "/" + thatMedia.video;
+        video.src = "./pictures/photographePhoto/" + thatMedia.photographerId + "/" + thatMedia.video;
         mediaTitle.innerHTML = thatMedia.title;
         mediaDate.innerHTML = thatMedia.date;      
         mediaPrice.innerHTML = thatMedia.price + "€";
