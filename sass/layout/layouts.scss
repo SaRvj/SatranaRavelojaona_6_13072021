@@ -69,7 +69,9 @@ header{
                 @include flex-wrap; 
                 @include self-text-align;
                 .tagportrait, .art, .fashion, .architecture,
-                .travel, .sports, .animals, .events{margin: 5px 8px 5px 8px;}
+                .travel, .sports, .animals, .events{
+                  margin: 5px 8px 5px 8px;
+                }
             }
         }
         #Our-Photographers{
@@ -77,7 +79,9 @@ header{
             @include justify-content-center;
             @include just-flex;
             color: $secondary-color;
-            @include tablet-style{@include justify-content-center;}
+            @include tablet-style{
+              @include justify-content-center;
+            }
             @include mobile-style{
               width: 40%;
               font-size: 130%;
