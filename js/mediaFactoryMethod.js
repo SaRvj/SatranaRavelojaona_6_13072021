@@ -1,4 +1,4 @@
-//récupérer et afficher les medias à p  rtir des id photographers
+//récupérer et afficher les medias à partir des id photographers
 function MediaFactory(thatMedia){
     if(thatMedia.hasOwnProperty('image')){
         return createImages();
@@ -65,6 +65,17 @@ function MediaFactory(thatMedia){
         mediaTitle.innerHTML = thatMedia.title;     
         mediaPrice.innerHTML = thatMedia.price + "€";
         image.src = "./pictures/photographerPhoto/photographersIdPhotos/" + thatMedia.photographerId + "/" + thatMedia.image;
-        
+
+        //récupérer les tags de media      
+        let thoseTags = thatMedia.tags;    
+        for( let i in thoseTags){
+        thisMediaTags.classList.add("removable");
+        if(thoseTags[i] === "portrait"){
+            thisMediaTags.id = ("tagportrait");
+            }
+        else {
+            thisMediaTags.id = (thoseTags[i]);
+            }
+        }
     }
 }
