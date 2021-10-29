@@ -28,7 +28,10 @@ function sortingTags (){
                 if (removeOrStay == 0){
                     element.style.display = "none";
                 }
-            }
+                //si le tag sélectionné est présent, la carte du photographe en cours est affiché
+                else {element.style.display = "block";}
+                return element;
+            });
         }
 
     }
