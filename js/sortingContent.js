@@ -166,6 +166,19 @@ function listenToMenu(){
         const allMedia = document.querySelectorAll(".media");
         const portfolio = document.querySelector(".portfolio");
         let beforeThisOne = document.querySelector(".bground3");
+
+        //variables
+        likesArray = [];
+        mediaArray = [];
+
+        Array.from(allMedia).map(element =>{
+            let howManyLikes = element.querySelector(':nth-child(2) > :nth-child(4) > :nth-child(1)').innerHTML;
+            likesArray.push(howManyLikes);
+            mediaArray.push(element);
+            return element;
+        });
+        
+        likesArray.sort((a, b) => b - a); // pour tri décroissant
     }
 }
 
