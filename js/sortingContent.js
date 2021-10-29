@@ -140,7 +140,25 @@ function sortingMediaTags (){
 
 //tri de media en fonction de la sélection du menu
 function listenToMenu(){
-    
+    //récupérer les élements du DOM
+    let sortMenu = document.getElementById("sort-by");
+
+    //écoute des change
+    sortMenu.addEventListener('change', checkSelection);
+
+    //tri sur la page de chargement
+    checkSelection();
+
+    //tri de media
+    function checkSelection(){
+        if (sortMenu.options[0].selected == true){
+          sortingMediaByPopularity();
+        } else if (sortMenu.options[1].selected == true){
+          sortingMediaByDate();
+        } else if (sortMenu.options[2].selected == true){
+          sortingMediaByTitle();    
+        }
+    }
 }
 
 
