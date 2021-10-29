@@ -80,4 +80,17 @@ function sortingMediaTags (){
             });      
         });
     }
+    
+    //écoute des click sur allTagsTag
+    for (let i = 0; i < allTagsTag.length ; i++) {
+        allTagsTag[i].addEventListener("click", function (event) {
+            //récupérer tous les articles dans Media
+            var mediaArticles = document.getElementsByTagName("article");
+            Array.from(mediaArticles).map(element => {
+                //afficher les cartes de tous les photographes     
+                element.style.display = "block";
+                return element;
+            });
+        });
+    }
 }
