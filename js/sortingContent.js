@@ -189,6 +189,64 @@ function listenToMenu(){
             }
         } 
     }
+
+    //tri par date
+    function sortingMediaByDate(){ 
+
+        //récupérer les élements du DOM
+        const allMedia = document.querySelectorAll(".media");
+        const portfolio = document.querySelector(".portfolio");
+        let beforeThisOne = document.querySelector(".bground3");
+    
+        //variables
+        datesArray = [];
+        mediaArray = [];
+    
+        Array.from(allMedia).map(element =>{
+    
+            //récupérer les élements du DOM
+            let whatIsTheDate = element.querySelector(':nth-child(1)').id;
+    
+            //supprimer l'élément de chaîne "-" pour le nombre brut
+            whatIsTheDate = whatIsTheDate.replace('-', '');
+            whatIsTheDate = whatIsTheDate.replace('-', '');
+            datesArray.push(whatIsTheDate);
+            mediaArray.push(element);
+            return element;
+        }); 
+        
+        //tri de l'Array
+        datesArray.sort();
+        datesArray.reverse();
+        
+        for(let i in datesArray){
+          thisOne = datesArray[i];
+          for (let i in mediaArray){
+            insertThisOne = mediaArray[i];
+            thatOne = mediaArray[i].childNodes[0].id;
+            //supprimer l'élément de chaîne "-" pour le nombre brut
+            thatOne = thatOne.replace('-', '');
+            thatOne = thatOne.replace('-', '');
+            if(thatOne == thisOne){portfolio.insertBefore(insertThisOne, beforeThisOne);} 
+          }
+        }     
+        
+        //calcul de la totale des nombres de date 
+        function findSum(str) {
+          let temp = "0";
+          let sum = 0;
+          for (let i = 0; i < str.length; i++) {
+            let ch = str[i];
+            if (!isNaN(String(ch) * 1))
+            temp += ch;
+            else {
+              sum += parseInt(temp);
+              temp = "0";
+            }
+          }
+          return sum + parseInt(temp);
+        }     
+    }
 }
 
 
