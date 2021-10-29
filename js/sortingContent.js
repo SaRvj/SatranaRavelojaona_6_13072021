@@ -99,24 +99,42 @@ function sortingMediaTags (){
 
     function ckeckKey(){
         if (e.keyCode === 13){
-            //écupérer les className des tags séléctionnés
+            //récupérer les className des tags séléctionnés
             let targetTag = e.target.className;
-        }
-        //récupérer tous les articles dans Media
-        let mediaArticles = document.getElementsByTagName("article");
-        Array.from(mediaArticles).map(element =>{
-            let inTags = element.lastChild.previousSibling.id;       
 
-            //si le tag sélectionné n'est pas présent, la carte du photographe en cours est supprimé
-            if (inTags == targetTag){
-                element.style.display = "block";
-            }
+            //récupérer tous les articles dans Media
+            let mediaArticles = document.getElementsByTagName("article");
+            Array.from(mediaArticles).map(element =>{
+                let inTags = element.lastChild.previousSibling.id;       
 
-            //si le tag sélectionné est présent, la carte du photographe en cours est affiché
-            else{
-                element.style.display = "none";
-            }        
-            return element;
-        });     
+                //si le tag sélectionné n'est pas présent, la carte du photographe en cours est supprimé
+                if (inTags == targetTag){
+                    element.style.display = "block";
+                }
+
+                //si le tag sélectionné est présent, la carte du photographe en cours est affiché
+                else{
+                    element.style.display = "none";
+                }        
+                return element;
+            }); 
+        }    
     }
+
+    //écoute des Keyup sur allTagsTag
+    allTagsTag.forEach((btn) => btn.addEventListener("keyup", ckeckKey2));
+
+    function ckeckKey2(){
+        if (e.keyCode === 13){
+    
+            //Get all Media articles
+            let mediaArticles = document.getElementsByTagName("article");
+            Array.from(mediaArticles).map(element => {        
+                //Display all photographer cards       
+                element.style.display = "block";
+                return element;
+            });  
+        }
+    } 
 }
+
