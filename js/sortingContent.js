@@ -247,6 +247,37 @@ function listenToMenu(){
           return sum + parseInt(temp);
         }     
     }
+
+    //tri par titre
+    function sortingMediaByTitle(){
+
+        //récupérer les élements du DOM
+        const allMedia = document.querySelectorAll(".media");
+        const portfolio = document.querySelector(".portfolio");
+        let beforeThisOne = document.querySelector(".bground3");
+
+        //variables
+        titlesArray = [];
+        mediaArray = [];
+
+        Array.from(allMedia).map(element => {
+            let thisTitle = element.lastChild.id;
+            titlesArray.push(thisTitle);
+            mediaArray.push(element);
+            return element;
+        });
+
+        titlesArray.sort(); // par ordre alphabétique
+
+        for(let i in titlesArray){
+            thisOne = titlesArray[i];
+            for (let i in mediaArray){
+                insertThisOne = mediaArray[i];
+                thatOne = mediaArray[i].lastChild.id;
+                if(thatOne == thisOne){
+                    portfolio.insertBefore(insertThisOne, beforeThisOne);
+                } 
+            }
+        }
+    }
 }
-
-
