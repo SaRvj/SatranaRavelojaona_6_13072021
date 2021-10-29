@@ -32,7 +32,18 @@ function sortingTags (){
                 else {element.style.display = "block";}
                 return element;
             });
-        }
+        });
 
     }
+    //écoute des click sur allTagsTag
+    for (let i = 0; i < allTagsTag.length ; i++) {
+        allTagsTag[i].addEventListener("click", function (event) {
+        //récupérer toutes les cartes photographes
+        let PhotographerSections = document.getElementsByTagName("section");
+        Array.from(PhotographerSections).map(element => {
+        //afficher toutes les cartes photographes       
+        element.style.display = "block";
+        return element;
+        });
+    });
 }
