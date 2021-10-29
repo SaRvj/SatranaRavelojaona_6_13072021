@@ -93,4 +93,14 @@ function sortingMediaTags (){
             });
         });
     }
+
+    //écoute des Keyup sur allTags
+    allTags.forEach((btn) => btn.addEventListener("keyup", ckeckKey));
+
+    function ckeckKey(){
+        if (e.keyCode === 13) {
+            //écupérer les className des tags séléctionnés
+            let targetTag = e.target.className;
+        }
+    }
 }
