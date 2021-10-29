@@ -159,6 +159,14 @@ function listenToMenu(){
           sortingMediaByTitle();    
         }
     }
+
+    //tri par popularité
+    function sortingMediaByPopularity(){
+        //récupérer les élements du DOM
+        const allMedia = document.querySelectorAll(".media");
+        const portfolio = document.querySelector(".portfolio");
+        let beforeThisOne = document.querySelector(".bground3");
+    }
 }
 
 
