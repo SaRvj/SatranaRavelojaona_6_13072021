@@ -48,3 +48,10 @@ function sortingTags (){
         });
     }
 }
+
+//mettre une écoute sur les tags cliqués et afficher le Media Articles correspondant
+function sortingMediaTags (){
+    //récupérer les class des tags
+    const allTags = document.querySelectorAll(".tagportrait,.art,.fashion,.architecture,.travel,.sports,.animals,.events");
+    const allTagsTag = document.querySelectorAll(".allTags");
+}
