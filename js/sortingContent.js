@@ -24,6 +24,9 @@ function sortingTags (){
                     }  
                     return element;
                 });
+                //si le tag sélectionné n'est pas présent, la carte du photographe en cours est supprimé
+                if (removeOrStay == 0){
+                    element.style.display = "none";
                 }
             }
         }
