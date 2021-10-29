@@ -138,3 +138,9 @@ function sortingMediaTags (){
     } 
 }
 
+//tri de media en fonction de la sélection du menu
+function listenToMenu(){
+    
+}
+
+
