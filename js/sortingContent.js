@@ -98,9 +98,25 @@ function sortingMediaTags (){
     allTags.forEach((btn) => btn.addEventListener("keyup", ckeckKey));
 
     function ckeckKey(){
-        if (e.keyCode === 13) {
+        if (e.keyCode === 13){
             //écupérer les className des tags séléctionnés
             let targetTag = e.target.className;
         }
+        //récupérer tous les articles dans Media
+        let mediaArticles = document.getElementsByTagName("article");
+        Array.from(mediaArticles).map(element =>{
+            let inTags = element.lastChild.previousSibling.id;       
+
+            //si le tag sélectionné n'est pas présent, la carte du photographe en cours est supprimé
+            if (inTags == targetTag){
+                element.style.display = "block";
+            }
+
+            //si le tag sélectionné est présent, la carte du photographe en cours est affiché
+            else{
+                element.style.display = "none";
+            }        
+            return element;
+        });     
     }
 }
