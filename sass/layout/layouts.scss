@@ -148,7 +148,7 @@ header{
   }
 }
 
-/*media lightbox*/
+/*lightbox modal*/
 .bground3{
   display: none;
   position: fixed;
@@ -160,53 +160,189 @@ header{
   overflow: auto;
   background-color: $opaque-lighbox-bg;
   .content3{
-    overflow: hidden;
-    margin: auto;
-    margin-top: 1%;
-    margin-bottom: 3%;
-    width: 1135px;
-    height: 850px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+      overflow: hidden;
+      margin: auto;
+      margin-top: 1%;
+      margin-bottom: 3%;
+      width: 1135px;
+      height: 850px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-animation-name: modalopen;
+      animation-name: modalopen;
+      -webkit-animation-duration: 0.8s;
+      animation-duration: 0.8s;
+      background-color: $around-modal-bg-color;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      @include just-flex;
+      @include justify-content-space-around;
+      .first-part, .third-part{
+          z-index: 101;
+          @include flex-column;
+          @include justify-content-center;
+          -webkit-box-flex: 2;
+          -ms-flex: 2;
+          flex: 2;
+          background-color: $transparent-lighbox-bg;
+          .back, .next{
+              @include just-flex;
+              @include self-text-align;
+              @include justify-content-center;
+              cursor: pointer;
+              content: " ";
+              width: 32px;
+              height: 32px;
+              -webkit-transition: .5s;
+              -o-transition: .5s;
+              transition: .5s;
+              float: left;
+              -webkit-box-shadow: -4px 4px 0 $secondary-color;
+              box-shadow: -4px 4px 0 $secondary-color;
+              @include mobile-style{
+                  width: 22px;
+                  height: 22px;
+              }
+          }
+          .back{
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+              cursor: pointer;
+          }
+          .next{
+              -webkit-transform: rotate(-135deg);
+              -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+              cursor: pointer;
+          }
+          .close{
+              cursor: pointer;
+              z-index: 103;       
+              &:before, &:after{
+                  background-color: $secondary-color;
+              }
+          }
+      }
+      .second-part{
+          @include flex-column;
+          -webkit-box-flex: 17;
+          -ms-flex: 17;
+          flex: 17;
+          overflow: hidden;
+          .media-ligthbox{
+              -webkit-box-flex:16;
+              -ms-flex:16;
+              flex:16;
+              border-radius: 5px;
+              overflow: hidden;
+              #image-lightbox{
+                  @include image-ligthBox;    
+                  overflow: hidden;
+              }
+              #video-lightbox{          
+                  -o-object-fit: scale-down;          
+                  object-fit: scale-down;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 5px;
+              }
+          }
+          #media-title-ligthbox{
+              -webkit-box-flex:1;
+              -ms-flex:1;
+              flex:1;
+              color: $secondary-color;
+              margin: 0px;
+              font-size: 180%;
+              font-weight: 600;
+              -ms-flex-item-align: start;
+              align-self: flex-start;
+          }
+      }
+      @include tablet-style{
+          width: 850.05px;
+          height: 637.5px;
+          .close{
+              right: 15px;
+          }
+          .media-title{
+              font-size: 120%;
+          }
+      }
+      @include mobile-style{
+          width: auto;
+          height: auto;
+          max-width: 700px;
+          max-height: 600px;
+          min-width: 500px;
+          min-height: 400px;
+          .close{
+              right: 0px;
+          }
+          .media-title{
+              font-size: 80%;
+          }
+      }
+  }
+}
+
+/*form modal: contact*/
+.bground, .bground2{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: $around-modal-bg-color;
+  .content2{
+    height: 100%;
+    max-height: 500px;
+    @include just-flex;
+    @include justify-content-center;
+    top: 40%;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+  }
+  .content, .content2{
+    margin: 5% auto;
+    width: 100%;
+    max-width: 500px;
     -webkit-animation-name: modalopen;
     animation-name: modalopen;
     -webkit-animation-duration: 0.8s;
     animation-duration: 0.8s;
-    background-color: $around-modal-bg-color;
+    background: $primary-color;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    @include just-flex;
-    @include justify-content-space-around;
-    .first-part, .third-part{
-      z-index: 101;
-      @include flex-column;
-      @include justify-content-center;
-      -webkit-box-flex: 2;
-      -ms-flex: 2;
-      flex: 2;
-      background-color: $transparent-lighbox-bg;
-       .back, .next{
-        @include just-flex;
-        @include self-text-align;
-        @include justify-content-center;
-          cursor: pointer;
-          content: " ";
-          width: 32px;
-          height: 32px;
-          -webkit-transition: .5s;
-          -o-transition: .5s;
-          transition: .5s;
-          float: left;
-          -webkit-box-shadow: -4px 4px 0 $secondary-color;
-          box-shadow: -4px 4px 0 $secondary-color;
-          @include mobile-style{
-            width: 22px;
-            height: 22px;
-          }
+    padding-top: 20px;
+    p{
+      line-height: 90%;
+      font-size: 250%;
+      text-align: left;
+      padding-left: 15px;
+      font-weight: 600;
+    }
+    .modal-body{
+      padding: 15px 40px 15px 20px;
+       margin: 15px auto;
+      label{
+        font-size: 200%;
+        display: inline-block;
+        margin-top: 11px;
+        @include truemobile-style{
+          margin: 11px 0px 11px 0px;
         }
       }
     }
+  }
 }
+
