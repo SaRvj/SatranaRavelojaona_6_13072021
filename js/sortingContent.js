@@ -260,7 +260,7 @@ function listenToMenu(){
         titlesArray = [];
         mediaArray = [];
 
-        Array.from(allMedia).map(element => {
+        Array.from(allMedia).map(element =>{
             let thisTitle = element.lastChild.id;
             titlesArray.push(thisTitle);
             mediaArray.push(element);

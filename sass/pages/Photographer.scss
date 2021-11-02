@@ -45,8 +45,12 @@ main{
             .name{
                 margin:0;
                 font-size: 350%;
-                @include tablet-style{font-size: 280%;}
-                @include mobile-style{font-size: 215%;}
+                @include tablet-style{
+                    font-size: 280%;
+                }
+                @include mobile-style{
+                    font-size: 215%;
+                }
             }
             .city, .country{
                 font-size: 140%;

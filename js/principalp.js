@@ -31,16 +31,18 @@ const main = async () =>{
    
     //écouter les clics sur les sections photographer pour afficher les pages photographes targeted 
     const photoSections = document.querySelectorAll('.ID');
-    Array.from(photoSections).map(element => {
+    Array.from(photoSections).map(element =>{
   
-        element.addEventListener("click", function (event) {
+        element.addEventListener("click", function (event){
             let targetId = element.id;
             window.location.href = "Photographer.html" + "?id=" + targetId;
         });
   
-        element.addEventListener("keyup", function (event) {
+        element.addEventListener("keyup", function (event){
             let targetId = element.id;
-            if (event.keyCode === 13) {window.location.href = "Photographer.html" + "?id=" + targetId;}
+            if (event.keyCode === 13){
+                window.location.href = "Photographer.html" + "?id=" + targetId;
+            }
         });    
     });
 };

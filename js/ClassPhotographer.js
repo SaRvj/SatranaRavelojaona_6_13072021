@@ -41,7 +41,7 @@ class Photographer {
       focusPortrait.src = "./pictures/photographePhoto/" + this.id + "/" + this.portrait;
       focusPortrait.alt = this.name;
       focusName.innerHTML = this.name;     
-      p1.innerHTML = this.city + ", " + this.country ; 
+      p1.innerHTML = this.city + "," + this.country ; 
       p2.innerHTML = this.tagline;
       p3.innerHTML = this.price + "€/jour";
   
@@ -51,8 +51,12 @@ class Photographer {
         let tag = document.createElement('a');
         aside2.appendChild(tag);
         tag.innerHTML = "#" + tagList[i]; 
-        if(tagList[i] == "portrait"){tag.classList.add("tag"+tagList[i]);}
-        else {tag.classList.add(tagList[i]);}
+        if(tagList[i] == "portrait"){
+          tag.classList.add("tag"+tagList[i]);
+        }
+        else {
+          tag.classList.add(tagList[i]);
+        }
       }
   
       //attribution de class, references, id aux élements du DOM
