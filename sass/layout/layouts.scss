@@ -180,5 +180,33 @@ header{
     position: relative;
     @include just-flex;
     @include justify-content-space-around;
-  }
+    .first-part, .third-part{
+      z-index: 101;
+      @include flex-column;
+      @include justify-content-center;
+      -webkit-box-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      background-color: $transparent-lighbox-bg;
+       .back, .next{
+        @include just-flex;
+        @include self-text-align;
+        @include justify-content-center;
+          cursor: pointer;
+          content: " ";
+          width: 32px;
+          height: 32px;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          float: left;
+          -webkit-box-shadow: -4px 4px 0 $secondary-color;
+          box-shadow: -4px 4px 0 $secondary-color;
+          @include mobile-style{
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
 }
