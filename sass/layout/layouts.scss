@@ -357,7 +357,34 @@ header{
       }
       .message{
         height: 100px;
-        @include truemobile-style{height: 200px;}
+        @include truemobile-style{
+          height: 200px;
+        }
+      }
+      .btn-submit{
+        margin-top: 20px;
+        border: none;
+        height: 45px;
+        width: 125px;
+        font-size: 90%;
+        @include truemobile-style{
+          @include self-text-align;
+          position: relative;
+          left: 53%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          font-weight: bold;
+          margin: 30px 0px 50px 0px;
+          height: 40px;
+          width: 200px;
+          font-size: 120%; 
+        }
+        &:hover, &:focus{
+          font-weight: bold;
+          color: $secondary-color;
+          background-color: white;
+        }
       }
     }
   }
