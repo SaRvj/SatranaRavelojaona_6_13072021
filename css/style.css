@@ -4,6 +4,14 @@
 /*breakpoint*/
 /*CONTENT STYLES*/
 /*IMAGES STYLE*/
+/*couleurs*/
+/*modal & lightboxes*/
+/*breakpoint*/
+/*couleurs*/
+/*modal & lightboxes*/
+/*breakpoint*/
+/*CONTENT STYLES*/
+/*IMAGES STYLE*/
 body {
   width: 100%;
   max-width: 1300px;
@@ -835,39 +843,6 @@ header #sub-header #Our-Photographers {
     opacity: 1;
   }
 }
-/*logo*/
-#logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  position: relative;
-  min-width: 315px;
-  min-height: 62px;
-  padding: 10px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  text-align: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-/*photographes*/
-.photographers .ID {
-  cursor: pointer;
-}
-.photographers .ID:hover .portrait {
-  -webkit-box-shadow: 1px 1px 8px #525252;
-  box-shadow: 1px 1px 8px #525252;
-}
-
 /*Général*/
 p {
   margin: 0px;
@@ -1384,14 +1359,5 @@ footer .Gen-likes .price {
     display: none;
   }
 }
-
-/*couleurs*/
-/*modal & lightboxes*/
-/*breakpoint*/
-/*CONTENT STYLES*/
-/*IMAGES STYLE*/
-/*couleurs*/
-/*modal & lightboxes*/
-/*breakpoint*/
 
 /*# sourceMappingURL=style.css.map */
