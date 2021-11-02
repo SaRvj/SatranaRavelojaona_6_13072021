@@ -387,6 +387,30 @@ header{
         }
       }
     }
+    .modal-body2{
+      padding: 50px;
+      margin: 15px auto;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+      @include justify-content-center;
+      p{
+        margin: 50px 0px 50px 0px;
+        @include self-text-align;
+      }
+      .btn-finished{
+        margin-top: 20px;
+        border: none;
+        height: 45px;
+        width: 125px;
+        font-size: 90%;
+        &:hover, &:focus{
+          font-weight: bold;
+          color: $secondary-color;
+          background-color: white;
+        }
+      }
+    }
   }
 }
 
