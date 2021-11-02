@@ -82,18 +82,18 @@ main{
                 margin-left: 15px;
             }    
             @include mobile-style{
-              max-width: unset;
-              position: fixed;
-              z-index: 99;
-              top: 92%;
-              left: 50%;
-              -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-              transform: translateX(-50%);
-              width: unset;
-              margin: 0px;
-              font-size: 150%;
-              padding: 3px 15px 3px 15px;
+                max-width: unset;
+                position: fixed;
+                z-index: 99;
+                top: 92%;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: unset;
+                margin: 0px;
+                font-size: 150%;
+                padding: 3px 15px 3px 15px;
             }    
         }
         @include tablet-style{
@@ -110,9 +110,9 @@ main{
         -ms-flex:2;
         flex:2;
         @include tablet-style{
-          padding: 0px 35px 25px 25px;
-          min-width: 273px;
-          @include flex-nowrap;
+            padding: 0px 35px 25px 25px;
+            min-width: 273px;
+            @include flex-nowrap;
         }
         @include mobile-style{
             min-width: unset;
@@ -129,16 +129,16 @@ main{
             align-self: flex-end;
             @include portrait-style-page;
             @include mobile-style{
-              padding: 0px;
-              @include flex-nowrap;
-              margin:10px 25px 10px 10px;
-              height: 170px;
-              width: 170px;
-              min-width: 170px;     
+                padding: 0px;
+                @include flex-nowrap;
+                margin:10px 25px 10px 10px;
+                height: 170px;
+                width: 170px;
+                min-width: 170px;     
             }
-             @include truemobile-style{
-              @include self-text-align;
-              margin: auto;
+            @include truemobile-style{
+                @include self-text-align;
+                margin: auto;
             }
         }
     }
@@ -226,10 +226,10 @@ main{
             @include just-flex;
             @include justify-content-space-between;
             .media-title{
-              color: $secondary-color;
-              margin: 0px;
-              font-size: 130%;
-              font-weight: 600;
+                color: $secondary-color;
+                margin: 0px;
+                font-size: 130%;
+                font-weight: 600;
             }
             .media-date, .media-price{
                 color: black;
@@ -246,12 +246,12 @@ main{
                 @include just-flex;
                 @include justify-content-space-between;
                 .number, .number-footer{
-                  color: $secondary-color;
-                  font-weight: bold;
-                  pointer-events: none;
-                  font-size: 100;
-                  margin-left: 5px;
-                  @include self-text-align;
+                    color: $secondary-color;
+                    font-weight: bold;
+                    pointer-events: none;
+                    font-size: 100;
+                    margin-left: 5px;
+                    @include self-text-align;
                 }
                 .icon-heart{
                     font-size: 95%;
