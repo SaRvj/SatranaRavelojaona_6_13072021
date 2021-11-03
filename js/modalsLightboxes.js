@@ -18,4 +18,15 @@ function putModals(){
     let lightBoxIsOpen = false;
     let ModalIsOpen = false;
     let opened = "";
+
+    /*évènements*/
+    //lancer la modale
+    contactBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+
+    /*lancer lightboxes*/
+    //au click
+    lightBtn.forEach((btn) => btn.addEventListener("click", launchLightBox));
+    lightBtnVideo.forEach((btn) => btn.addEventListener("click", launchLightBoxVideo));
+    
+
 }
