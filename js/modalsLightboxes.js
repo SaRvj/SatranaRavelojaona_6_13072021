@@ -12,4 +12,10 @@ function putModals(){
     const main = document.getElementsByTagName("main");
     const next = document.querySelectorAll(".next");
     const back = document.querySelectorAll(".back");
+
+    //variables
+    let mediaType = 0;
+    let lightBoxIsOpen = false;
+    let ModalIsOpen = false;
+    let opened = "";
 }
