@@ -133,6 +133,42 @@ function putModals(){
         }
     }
   
+    //lancer la lightbox contenant video par click
+    function launchLightBoxVideo() {
+        lightBoxIsOpen = true; 
   
+        //dire à javascript que c'est une vidéo
+        mediaType++;
+  
+        //Display ligthbox
+        lightBox.style.display = "block"; 
+        
+        //inserer le titre correcte de la video 
+        let mediaTitle = document.getElementById("media-title-ligthbox");
+        let targetedTitle = e.target.id;
+        let targetedAlt = e.target.title;
+        mediaTitle.innerHTML = targetedTitle;
+          
+        //insérer la video correcte
+        let selectedMedia = document.querySelector(".media-ligthbox");
+        let targetedImg = e.target.src;
+  
+  
+        //vérifier s'il y a déjà une video 
+        if (selectedMedia.hasChildNodes()){}
+        else{
+          //insérer la video une fois
+          let videoLightbox = document.createElement('video');
+          videoLightbox.id = "video-lightbox";    
+          selectedMedia.appendChild(videoLightbox);
+          let videoLightboxSrc = document.createElement('source');
+          videoLightbox.appendChild(videoLightboxSrc);
+          videoLightboxSrc.src = targetedImg;
+          videoLightbox.title = targetedAlt;
+          videoLightboxSrc.type = "video/mp4"; 
+          videoLightbox.autoplay = true;
+          videoLightbox.setAttribute("controls","controls");   
+        }
+    }
 
 }
