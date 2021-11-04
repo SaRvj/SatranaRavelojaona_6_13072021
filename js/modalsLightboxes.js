@@ -233,6 +233,98 @@ function putModals(){
         modalbg.style.display = "none";
         lightBox.style.display ="none";     
     }  
-  
+    
+    /*aller sur "next" media*/
+    //écouter les .next
+    Array.from(next).map(element => {
+        element.addEventListener("click", function (event) {
+
+            //récupérer les éléments du DOM et trouver le tire de media
+            let inThisLigthMedia = event.target.parentNode.parentNode;
+            let thisLigthMedia = inThisLigthMedia.querySelector(':nth-child(2)');
+            const allMedia = document.querySelectorAll(".media");
+
+            //Variables
+            let mediaTarget, nextMediaType;
+
+            //trouver le titre de media
+            let thatLigthMedia = thisLigthMedia.querySelector(':nth-child(2)').innerHTML;
+
+            //trouver media en cours à partir du titre en cours
+            Array.from(allMedia).map(element => {
+                let thisTitle = element.lastChild.id;      
+                if(thisTitle == thatLigthMedia){
+
+                    //chercher next media
+                    mediaTarget = element.nextSibling;
+
+                    //vérifier le type du media en cours current media type        
+                    let currentTagName = element.id;
+
+                    //vérifier si media en cours n'est pas le dernier de la page en cours
+                    if(mediaTarget.tagName == "ARTICLE"){
+
+                        //insérer le titre de next media  
+                        let mediaTitle = document.getElementById("media-title-ligthbox");
+                        let targetedTitle = mediaTarget.lastChild.id;
+                        mediaTitle.innerHTML = targetedTitle;
+
+                        //récupérer l'élément paret du zone d'affichage
+                        let selectedMedia = document.querySelector(".media-ligthbox");      
+                               
+                        //si media en cours est une image
+                        if (currentTagName == "IMAGE"){
+
+                            //retirer image en cours
+                            let toRemove = document.getElementById("image-lightbox");
+                            selectedMedia.removeChild(toRemove);
+
+                            //si media en cours est une video
+                        }   else if (currentTagName == "VIDEO"){
+                            //retirer video en cours
+                            let toRemove = document.getElementById("video-lightbox");
+                            selectedMedia.removeChild(toRemove);
+                        }
+
+                        //récupérer targeted media
+                        let targetedMediaSrc = mediaTarget.querySelector(':nth-child(1) > :nth-child(1)').src;
+                        let targetedAlt = mediaTarget.querySelector(':nth-child(1) > :nth-child(1)').alt;
+                        let targetedAlt2 = mediaTarget.querySelector(':nth-child(1) > :nth-child(1)').title;
+
+                        //vérifier le type de next media
+                        nextMediaType = mediaTarget.querySelector(':nth-child(1) > :nth-child(1)').className;
+
+                        //si media en cours est une image
+                        if (nextMediaType == "media-img"){
+
+                            //insérer next image
+                            let imageLightbox = document.createElement('img');
+                            imageLightbox.id = "image-lightbox";    
+                            selectedMedia.appendChild(imageLightbox);
+                            imageLightbox.src = targetedMediaSrc;
+                            imageLightbox.alt = targetedAlt;
+                        }
+
+                        //si media en cours est une video
+                        else if (nextMediaType == "media-vid"){
+
+                            //inserer next video
+                            let videoLightbox = document.createElement('video');
+                            videoLightbox.id = "video-lightbox";    
+                            selectedMedia.appendChild(videoLightbox);
+                            let videoLightboxSrc = document.createElement('source');
+                            videoLightbox.appendChild(videoLightboxSrc);
+                            videoLightboxSrc.src = targetedMediaSrc;
+                            videoLightboxSrc.type = "video/mp4"; 
+                            videoLightbox.autoplay = true;
+                            videoLightbox.title = targetedAlt2;
+                            videoLightbox.setAttribute("controls","controls");
+                        }
+                    }
+                }
+            });
+        });        
+    });
+    
 
 }
