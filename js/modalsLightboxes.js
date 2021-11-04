@@ -210,6 +210,29 @@ function putModals(){
             }
         }
     }
+
+    //fermer la modale et les lightboxes par touche entrer 
+    function ckeckKeyClose(){
+        if (KeyboardEvent.key === 13){
+            closeModal();
+        }
+    }
+
+    //fermer la modal et lightboxes
+    function closeModal() {
+
+        let selectedMedia = document.querySelector(".media-ligthbox");
+        let closeIt = selectedMedia.querySelector(':nth-child(1)');
+        if (selectedMedia.hasChildNodes()){
+          selectedMedia.removeChild(closeIt);
+        }
+        lightBoxIsOpen = false;
+        ModalIsOpen = false;     
+  
+        //ne plus afficher modal et ligthbox
+        modalbg.style.display = "none";
+        lightBox.style.display ="none";     
+    }  
   
 
 }
