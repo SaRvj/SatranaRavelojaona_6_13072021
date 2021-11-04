@@ -234,8 +234,8 @@ function putModals(){
         lightBox.style.display ="none";     
     }  
     
-    /*aller sur "next" media*/
-    //écouter les .next
+    /*aller sur "suivant" media*/
+    //écouter .next
     Array.from(next).map(element => {
         element.addEventListener("click", function (event) {
 
@@ -247,15 +247,15 @@ function putModals(){
             //Variables
             let mediaTarget, nextMediaType;
 
-            //trouver le titre de media
+            //atteindre le titre de media
             let thatLigthMedia = thisLigthMedia.querySelector(':nth-child(2)').innerHTML;
 
-            //trouver media en cours à partir du titre en cours
+            //atteindre media en cours à partir du titre en cours
             Array.from(allMedia).map(element => {
                 let thisTitle = element.lastChild.id;      
                 if(thisTitle == thatLigthMedia){
 
-                    //chercher next media
+                    //atteindre next media
                     mediaTarget = element.nextSibling;
 
                     //vérifier le type du media en cours current media type        
@@ -326,5 +326,148 @@ function putModals(){
         });        
     });
     
+    /*aller sur "précedent" media*/
+    //écouter .next
+    Array.from(back).map(element => {
+        element.addEventListener("click", function (event) {
 
+            //récupérer les éléments du DOM et trouver le tire de media
+            let inThisLigthMedia = event.target.parentNode.parentNode;
+            let thisLigthMedia = inThisLigthMedia.querySelector(':nth-child(2)');
+            const allMedia = document.querySelectorAll(".media");
+
+            //Variables
+            let mediaTarget, nextMediaType;
+
+            //atteindre le titre de media
+            let thatLigthMedia = thisLigthMedia.querySelector(':nth-child(2)').innerHTML;
+
+            //atteindre media en cours à partir du titre en cours
+            Array.from(allMedia).map(element => {
+                let thisTitle = element.lastChild.id;      
+                if(thisTitle == thatLigthMedia){
+
+                    //atteindre next media
+                    mediaTarget = element.previousElementSibling;
+
+                    //vérifier le type de media en cours        
+                    let currentTagName = element.id;
+
+                    //vérifier si media en cours n'est pas le dernier de la page en cours
+                    if(mediaTarget == null){}
+                    else if(mediaTarget.tagName == "ARTICLE"){
+
+                        //insérer le titre de next media   
+                        let mediaTitle = document.getElementById("media-title-ligthbox");
+                        let targetedTitle = mediaTarget.lastChild.id;
+                        mediaTitle.innerHTML = targetedTitle;
+
+                        //récupérer l'élément paret du zone d'affichage
+                        let selectedMedia = document.querySelector(".media-ligthbox");      
+                                   
+                        //si media en cours est une image
+                        if (currentTagName == "IMAGE"){
+
+                            //retirer image en cours
+                            let toRemove = document.getElementById("image-lightbox");
+                            selectedMedia.removeChild(toRemove);
+
+                            //si media en cours est une video
+                        } else if (currentTagName == "VIDEO"){
+                            //retirer video en cours
+                            let toRemove = document.getElementById("video-lightbox");
+                            selectedMedia.removeChild(toRemove);
+                        }
+
+                        //récupérer targeted media
+                        let targetedMediaSrc = mediaTarget.querySelector(':nth-child(1) > :nth-child(1)').src;
+                    
+                        //vérifier le type de next media
+                        nextMediaType = mediaTarget.querySelector(':nth-child(1) > :nth-child(1)').className;
+
+                        //si media suivant est une image
+                        if (nextMediaType == "media-img"){
+
+                            //insérer next image
+                            let imageLightbox = document.createElement('img');
+                            imageLightbox.id = "image-lightbox";    
+                            selectedMedia.appendChild(imageLightbox);
+                            imageLightbox.src = targetedMediaSrc;
+                        }
+
+                        //si media suivant est une video
+                        else if (nextMediaType == "media-vid"){
+
+                            //insérer next video
+                            let videoLightbox = document.createElement('video');
+                            videoLightbox.id = "video-lightbox";    
+                            selectedMedia.appendChild(videoLightbox);
+                            let videoLightboxSrc = document.createElement('source');
+                            videoLightbox.appendChild(videoLightboxSrc);
+                            videoLightboxSrc.src = targetedMediaSrc;
+                            videoLightboxSrc.type = "video/mp4"; 
+                            videoLightbox.autoplay = true;
+                            videoLightbox.setAttribute("controls","controls");
+                        }
+
+                        //pour le premier media sur la page
+                        else if (nextMediaType == "up-media"){
+                            let newMedia = mediaTarget.querySelector(':nth-child(1) > :nth-child(1) > :nth-child(1)').className;
+                            let targetedMediaSrc = mediaTarget.querySelector(':nth-child(1) > :nth-child(1) > :nth-child(1)').src;
+
+                            if (newMedia == "media-img"){
+
+                                //insérer image suivant
+                                let imageLightbox = document.createElement('img');
+                                imageLightbox.id = "image-lightbox";    
+                                selectedMedia.appendChild(imageLightbox);
+                                imageLightbox.src = targetedMediaSrc;
+                            }
+                            else if (newMedia == "media-vid"){
+
+                                //insérer video suivant
+                                let videoLightbox = document.createElement('video');
+                                videoLightbox.id = "video-lightbox";    
+                                selectedMedia.appendChild(videoLightbox);
+                                let videoLightboxSrc = document.createElement('source');
+                                videoLightbox.appendChild(videoLightboxSrc);
+                                videoLightboxSrc.src = targetedMediaSrc;
+                                videoLightboxSrc.type = "video/mp4"; 
+                                videoLightbox.autoplay = true;
+                                videoLightbox.setAttribute("controls","controls");
+                            }
+                        }
+                    }   
+                }
+            });
+        });
+    });
+}
+
+//soumettre formulaire et déclencher confirmation contact
+function validate() {
+
+    //empêcher de soumettre
+    e.preventDefault();
+
+    //Afficher les entrées de formulaire
+    console.log("Nom :" + last.value);
+    console.log("E-mail :" + email.value);
+    console.log("Message :" + message.value);
+
+    //récupérer les éléments du DOM
+    const modalbg = document.querySelector(".bground");
+    const lightBox = document.querySelector(".bground3");
+    const modalbg2 = document.querySelector(".bground2"); 
+
+    //ne plus afficher modal et lightbox
+    modalbg.style.display = "none";
+    lightBox.style.display ="none";
+    modalbg2.style.display = "block";
+
+    //fermer modal 2
+    function closeModal2() {modalbg2.style.display = "none";}
+
+    //afficher et fermer automatiquement la modale de confirmation
+    setTimeout(closeModal2, 2500);
 }
