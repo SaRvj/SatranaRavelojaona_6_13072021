@@ -140,7 +140,7 @@ function putModals(){
         //dire à javascript que c'est une vidéo
         mediaType++;
   
-        //Display ligthbox
+        //afficher la lightbox
         lightBox.style.display = "block"; 
         
         //inserer le titre correcte de la video 
@@ -157,18 +157,59 @@ function putModals(){
         //vérifier s'il y a déjà une video 
         if (selectedMedia.hasChildNodes()){}
         else{
-          //insérer la video une fois
-          let videoLightbox = document.createElement('video');
-          videoLightbox.id = "video-lightbox";    
-          selectedMedia.appendChild(videoLightbox);
-          let videoLightboxSrc = document.createElement('source');
-          videoLightbox.appendChild(videoLightboxSrc);
-          videoLightboxSrc.src = targetedImg;
-          videoLightbox.title = targetedAlt;
-          videoLightboxSrc.type = "video/mp4"; 
-          videoLightbox.autoplay = true;
-          videoLightbox.setAttribute("controls","controls");   
+            //insérer la video une fois
+            let videoLightbox = document.createElement('video');
+            videoLightbox.id = "video-lightbox";    
+            selectedMedia.appendChild(videoLightbox);
+            let videoLightboxSrc = document.createElement('source');
+            videoLightbox.appendChild(videoLightboxSrc);
+            videoLightboxSrc.src = targetedImg;
+            videoLightbox.title = targetedAlt;
+            videoLightboxSrc.type = "video/mp4"; 
+            videoLightbox.autoplay = true;
+            videoLightbox.setAttribute("controls","controls");   
         }
     }
+
+    //lancer la lightbox contenant video par touche de clavier
+    function launchLightBoxVideo2() {
+        if (KeyboardEvent.key === 13) {
+            lightBoxIsOpen = true;
+  
+            //dire à javascript que c'est une vidéo
+            mediaType++;
+  
+            //afficher la lightbox
+            lightBox.style.display = "block"; 
+          
+            //inserer le titre correcte de la video  
+            let mediaTitle = document.getElementById("media-title-ligthbox");
+            let targetedTitle = e.target.id;
+            let targetedAlt = e.target.title;
+            mediaTitle.innerHTML = targetedTitle;
+            
+            //insérer la video correcte
+            let selectedMedia = document.querySelector(".media-ligthbox");
+            let targetedImg = e.target.src;
+  
+  
+            //vérifier s'il y a déjà une video    
+            if (selectedMedia.hasChildNodes()){}
+            else{
+                //insérer la video une fois
+                let videoLightbox = document.createElement('video');
+                videoLightbox.id = "video-lightbox";    
+                selectedMedia.appendChild(videoLightbox);
+                let videoLightboxSrc = document.createElement('source');
+                videoLightbox.appendChild(videoLightboxSrc);
+                videoLightboxSrc.src = targetedImg;
+                videoLightbox.title = targetedAlt;
+                videoLightboxSrc.type = "video/mp4"; 
+                videoLightbox.autoplay = true;
+                videoLightbox.setAttribute("controls","controls");   
+            }
+        }
+    }
+  
 
 }
