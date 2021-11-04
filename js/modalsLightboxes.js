@@ -74,10 +74,10 @@ function putModals(){
     function launchLightBox(){ 
         lightBoxIsOpen = true;
   
-        //afficher ligthbox
+        //afficher lightbox
         lightBox.style.display = "block";       
   
-        //inserer le titre corect des imagesInsert correct Image Title  
+        //inserer le titre correct des images 
         let mediaTitle = document.getElementById("media-title-ligthbox");
         let targetedTitle = e.target.id;
         mediaTitle.innerHTML = targetedTitle;
@@ -99,7 +99,39 @@ function putModals(){
           imageLightbox.alt = targetedAlt;
         }
         
-      }
+    }
+  
+    //lancer la lightbox contenant image par touche de clavier
+    function launchLightBox2() {
+        if (KeyboardEvent.key === 13) {
+            lightBoxIsOpen = true;
+  
+            //afficher lightbox
+            lightBox.style.display = "block"; 
+          
+            //inserer le titre correct des images
+            let mediaTitle = document.getElementById("media-title-ligthbox");
+            let targetedTitle = e.target.id;
+            mediaTitle.innerHTML = targetedTitle;
+            
+            //insérer l'image correcte
+            let selectedMedia = document.querySelector(".media-ligthbox");
+            let targetedImg = e.target.src;
+            let targetedAlt = e.target.alt;
+  
+  
+            //vérifier s'il y a déjà une image  
+            if (selectedMedia.hasChildNodes()){}
+            else{
+                //insérer l'image une fois
+                let imageLightbox = document.createElement('img');
+                imageLightbox.id = "image-lightbox";    
+                selectedMedia.appendChild(imageLightbox);
+                imageLightbox.src = targetedImg;
+                imageLightbox.alt = targetedAlt;
+            }
+        }
+    }
   
   
 
