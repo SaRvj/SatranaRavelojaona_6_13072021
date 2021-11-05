@@ -82,7 +82,7 @@ class Photographer {
       let name = document.querySelector(".name");        
       let modalName = document.querySelector(".modal-name");     
       let location = document.querySelector(".city");        
-      let tagline = document.querySelector(".tagline");    
+      let tagdescription = document.querySelector(".tagdescription");    
       let portrait = document.querySelector(".portrait");
       let price = document.querySelector(".price");
   
@@ -90,7 +90,7 @@ class Photographer {
       name.innerHTML = this.name;
       modalName.innerHTML = this.name;
       location.innerHTML = this.city + ", " + this.country;
-      tagline.innerHTML = this.tagline;    
+      tagdescription.innerHTML = this.tagdescription;    
       portrait.src = "./pictures/photographePhoto/" + this.id + "/" + this.portrait;
       portrait.alt = this.name;
       price.innerHTML = this.price + "€ /jour";

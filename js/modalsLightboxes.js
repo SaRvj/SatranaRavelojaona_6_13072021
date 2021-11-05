@@ -43,20 +43,20 @@ function putModals(){
     document.addEventListener('keydown', function(e) {
         if(lightBoxIsOpen == true || ModalIsOpen == true){        
             //fermer la modale et lightbow en appuyant sur échap
-            if (KeyboardEvent.key === 27){
+            if (KeyboardEvent.code === 27){
                 closeModal();
             }
   
             //change media en lightbox en pressant la flèche
   
             //flèche gauche pour précédent
-            else if(KeyboardEvent.key === 37){
+            else if(KeyboardEvent.code === 37){
                 let target = document.querySelector(".back");
                 target.click(); 
             }
   
             //flèche droite pour suivant
-            else if (KeyboardEvent.key === 39){
+            else if (KeyboardEvent.code === 39){
                 let target = document.querySelector(".next");
                 target.click(); 
             }
@@ -103,7 +103,7 @@ function putModals(){
   
     //lancer la lightbox contenant image par touche de clavier
     function launchLightBox2() {
-        if (KeyboardEvent.key === 13) {
+        if (KeyboardEvent.code === 13) {
             lightBoxIsOpen = true;
   
             //afficher lightbox
@@ -173,7 +173,7 @@ function putModals(){
 
     //lancer la lightbox contenant video par touche de clavier
     function launchLightBoxVideo2() {
-        if (KeyboardEvent.key === 13) {
+        if (KeyboardEvent.code === 13) {
             lightBoxIsOpen = true;
   
             //dire à javascript que c'est une vidéo
@@ -213,7 +213,7 @@ function putModals(){
 
     //fermer la modale et les lightboxes par touche entrer 
     function ckeckKeyClose(){
-        if (KeyboardEvent.key === 13){
+        if ( KeyboardEvent.code === 13){
             closeModal();
         }
     }

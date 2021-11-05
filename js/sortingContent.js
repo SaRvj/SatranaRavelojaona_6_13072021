@@ -185,7 +185,9 @@ function listenToMenu(){
             for (let i in mediaArray){
                 insertThisOne = mediaArray[i];
                 thatOne = mediaArray[i].childNodes[1].childNodes[3].childNodes[0].innerHTML;
-                if(thatOne == thisOne){portfolio.insertBefore(insertThisOne, beforeThisOne);} 
+                if(thatOne == thisOne){
+                    portfolio.insertBefore(insertThisOne, beforeThisOne);
+                } 
             }
         } 
     }
