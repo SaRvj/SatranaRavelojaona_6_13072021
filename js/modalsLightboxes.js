@@ -213,7 +213,7 @@ function putModals(){
 
     //fermer la modale et les lightboxes par touche entrer 
     function ckeckKeyClose(){
-        if ( KeyboardEvent.code === 13){
+        if (KeyboardEvent.code === 13){
             closeModal();
         }
     }
@@ -224,7 +224,7 @@ function putModals(){
         let selectedMedia = document.querySelector(".media-ligthbox");
         let closeIt = selectedMedia.querySelector(':nth-child(1)');
         if (selectedMedia.hasChildNodes()){
-          selectedMedia.removeChild(closeIt);
+            selectedMedia.removeChild(closeIt);
         }
         lightBoxIsOpen = false;
         ModalIsOpen = false;     

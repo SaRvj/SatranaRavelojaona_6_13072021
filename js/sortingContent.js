@@ -98,7 +98,7 @@ function sortingMediaTags (){
     allTags.forEach((btn) => btn.addEventListener("keyup", ckeckKey));
 
     function ckeckKey(){
-        if (e.keyCode === 13){
+        if (KeyboardEvent.code === 13){
             //récupérer les className des tags séléctionnés
             let targetTag = e.target.className;
 
@@ -125,7 +125,7 @@ function sortingMediaTags (){
     allTagsTag.forEach((btn) => btn.addEventListener("keyup", ckeckKey2));
 
     function ckeckKey2(){
-        if (e.keyCode === 13){
+        if (KeyboardEvent.code === 13){
     
             //Get all Media articles
             let mediaArticles = document.getElementsByTagName("article");
