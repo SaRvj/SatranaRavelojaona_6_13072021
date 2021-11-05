@@ -55,7 +55,7 @@ const page = async () =>{
     sortingMediaTags(); 
 
     //mis en place modals and lighboxes
-    setModals();
+    putModals();
 
     //calcul des totaux des likes
     totalOfLikes();

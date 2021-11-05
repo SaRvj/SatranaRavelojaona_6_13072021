@@ -64,7 +64,7 @@ function incrementLikes() {
 
     //faire augmenter les nombres
     function increaseNumber2() {
-        if (e.keyCode === 13) {
+        if (KeyboardEvent.code === 13) {
             if(time == 0){
                 let newNumberTarget = e.target.firstChild;   
                 let likeButton = e.target.firstChild.innerText;  
