@@ -79,13 +79,13 @@ function putModals(){
   
         //inserer le titre correct des images 
         let mediaTitle = document.getElementById("media-title-ligthbox");
-        let targetedTitle = e.target.id;
+        let targetedTitle = Event.target.id;
         mediaTitle.innerHTML = targetedTitle;
           
         //insérer l'image correcte
         let selectedMedia = document.querySelector(".media-ligthbox");
-        let targetedImg = e.target.src;
-        let targetedAlt = e.target.alt;
+        let targetedImg = Event.target.src;
+        let targetedAlt = Event.target.alt;
   
   
         //vérifier s'il y a déjà une image
@@ -111,13 +111,13 @@ function putModals(){
           
             //inserer le titre correct des images
             let mediaTitle = document.getElementById("media-title-ligthbox");
-            let targetedTitle = e.target.id;
+            let targetedTitle = Event.target.id;
             mediaTitle.innerHTML = targetedTitle;
             
             //insérer l'image correcte
             let selectedMedia = document.querySelector(".media-ligthbox");
-            let targetedImg = e.target.src;
-            let targetedAlt = e.target.alt;
+            let targetedImg = Event.target.src;
+            let targetedAlt = Event.target.alt;
   
   
             //vérifier s'il y a déjà une image  
@@ -145,13 +145,13 @@ function putModals(){
         
         //inserer le titre correcte de la video 
         let mediaTitle = document.getElementById("media-title-ligthbox");
-        let targetedTitle = e.target.id;
-        let targetedAlt = e.target.title;
+        let targetedTitle = Event.target.id;
+        let targetedAlt = Event.target.title;
         mediaTitle.innerHTML = targetedTitle;
           
         //insérer la video correcte
         let selectedMedia = document.querySelector(".media-ligthbox");
-        let targetedImg = e.target.src;
+        let targetedImg = Event.target.src;
   
   
         //vérifier s'il y a déjà une video 
@@ -184,13 +184,13 @@ function putModals(){
           
             //inserer le titre correcte de la video  
             let mediaTitle = document.getElementById("media-title-ligthbox");
-            let targetedTitle = e.target.id;
-            let targetedAlt = e.target.title;
+            let targetedTitle = Event.target.id;
+            let targetedAlt = Event.target.title;
             mediaTitle.innerHTML = targetedTitle;
             
             //insérer la video correcte
             let selectedMedia = document.querySelector(".media-ligthbox");
-            let targetedImg = e.target.src;
+            let targetedImg = Event.target.src;
   
   
             //vérifier s'il y a déjà une video    
@@ -448,7 +448,7 @@ function putModals(){
 function validate() {
 
     //empêcher de soumettre
-    e.preventDefault();
+    Event.preventDefault();
 
     //Afficher les entrées de formulaire
     console.log("Nom :" + last.value);
