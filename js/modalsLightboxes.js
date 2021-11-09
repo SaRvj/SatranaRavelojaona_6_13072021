@@ -1,5 +1,5 @@
 // affichage modals et lightboxes
-function putModals(){
+function getModals(){
     //élements du DOM
     const modalbg = document.querySelector(".bground");
     const modalbg2 = document.querySelector(".bground2");
@@ -50,13 +50,13 @@ function putModals(){
             //change media en lightbox en pressant la flèche
   
             //flèche gauche pour précédent
-            else if(KeyboardEvent.code === 37){
+            else if(KeyboardEvent.key === 'ArrowRight'){
                 let target = document.querySelector(".back");
                 target.click(); 
             }
   
             //flèche droite pour suivant
-            else if (KeyboardEvent.code === 39){
+            else if (KeyboardEvent.key === 'ArrowLeft'){
                 let target = document.querySelector(".next");
                 target.click(); 
             }
@@ -79,7 +79,7 @@ function putModals(){
   
         //inserer le titre correct des images 
         let mediaTitle = document.getElementById("media-title-ligthbox");
-        let targetedTitle = Event.target.id;
+        let targetedTitle = Event.target.Id;
         mediaTitle.innerHTML = targetedTitle;
           
         //insérer l'image correcte
@@ -103,7 +103,7 @@ function putModals(){
   
     //lancer la lightbox contenant image par touche de clavier
     function launchLightBox2() {
-        if (KeyboardEvent.code === 13) {
+        if (KeyboardEvent.key === 'Enter') {
             lightBoxIsOpen = true;
   
             //afficher lightbox
@@ -145,7 +145,7 @@ function putModals(){
         
         //inserer le titre correcte de la video 
         let mediaTitle = document.getElementById("media-title-ligthbox");
-        let targetedTitle = Event.target.id;
+        let targetedTitle = Event.target.Id;
         let targetedAlt = Event.target.title;
         mediaTitle.innerHTML = targetedTitle;
           
@@ -173,7 +173,7 @@ function putModals(){
 
     //lancer la lightbox contenant video par touche de clavier
     function launchLightBoxVideo2() {
-        if (KeyboardEvent.code === 13) {
+        if (KeyboardEvent.key === 'Enter') {
             lightBoxIsOpen = true;
   
             //dire à javascript que c'est une vidéo
@@ -213,7 +213,7 @@ function putModals(){
 
     //fermer la modale et les lightboxes par touche entrer 
     function ckeckKeyClose(){
-        if (KeyboardEvent.code === 13){
+        if (KeyboardEvent.key === 'Enter'){
             closeModal();
         }
     }
@@ -445,7 +445,7 @@ function putModals(){
 }
 
 //soumettre formulaire et déclencher confirmation contact
-function validate() {
+function validate(Event) {
 
     //empêcher de soumettre
     Event.preventDefault();
@@ -466,7 +466,7 @@ function validate() {
     modalbg2.style.display = "block";
 
     //fermer modal 2
-    function closeModal2() {modalbg2.style.display = "none";}
+    function closeModal2() {modalbg2.style.display = "none"};
 
     //afficher et fermer automatiquement la modale de confirmation
     setTimeout(closeModal2, 2500);

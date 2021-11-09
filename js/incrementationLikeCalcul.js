@@ -11,11 +11,11 @@ function totalOfLikes() {
     
     let valuesArray = [];
     let sum = 0;
-    for (var i = 0; i < totaloflike.length; i++) {   
+    for (let i = 0; i < totaloflike.length; i++) {   
         let value = parseInt(totaloflike[i]);
         valuesArray.push(value);
     }
-    for (var i = 0; i < valuesArray.length; i++) {
+    for (let i = 0; i < valuesArray.length; i++) {
         sum += valuesArray[i];
     }  
     let totalNumber = document.querySelector(".number-footer");

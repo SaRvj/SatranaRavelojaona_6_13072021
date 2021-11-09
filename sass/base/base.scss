@@ -2,12 +2,18 @@
 
 body{
 	width: 100%;
-	max-width: 1300px;
-	min-width: 495px;
-	margin: auto;
+	// max-width: 1300px;
+	// min-width: 495px;
+	// margin: auto;
 	background-color: white;
 	font-family: 'DM Sans', Arial, Verdana, sans-serif;
 	padding: 5px;
+	margin: 0;
+	// padding: 0;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.5;
 }
 
 a{
@@ -22,8 +28,12 @@ main{
 	@include flex-wrap;
 	margin: auto;
 	@include justify-content-center;
-	@include tablet-style{@include justify-content-space-around;}
-	@include mobile-style{padding-top: 0px;}
+	@include tablet-style{
+		@include justify-content-space-around;
+	}
+	@include mobile-style{
+		padding-top: 0px;
+	}
 }
 
 h1{
