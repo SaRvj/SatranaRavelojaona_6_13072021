@@ -4,7 +4,7 @@ import {filterPhotographers} from "./js/page.js";
 import {photographerPageGenerator} from "./js/pagephotographers.js";
 import {displayGallery} from "./js/gallery.js";
 import {sortGallery} from "./js/sorting.js";
-import {likeSystem} from "./js/likesincrement.js";
+import {likesIncrement} from "./js/likesIncrement.js";
 
 //main
 fetch("./data/FishEyeData.json")
@@ -32,7 +32,7 @@ fetch("./data/FishEyeData.json")
       photographerPageGenerator(filteredDataPhotographers[0])
       displayGallery(filteredDataMedia)
       sortGallery(filteredDataMedia);
-      likeSystem(filteredDataMedia);
+      likesIncrement(filteredDataMedia);
 
       return false
     }
