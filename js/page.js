@@ -7,9 +7,9 @@ export function displayPhotographers(photographersData) {
         indexPhotographersDOM += `
            
                 <div class="photographer-card">
-                    <a href="photographer-page.html?id=${photographer.id}" tabindex="0">
+                    <a href="photographer.html?id=${photographer.id}" tabindex="0">
                         <figure class="photographer-card-picture">
-                            <img src= img/Photographers_ID_Photos/${photographer.portrait} alt= "portrait de ${photographer.name}" />
+                            <img src= pictures/Photographers_ID_Photos/${photographer.portrait} alt= "portrait de ${photographer.name}" />
                         </figure>
                         <figcaption class="photographer-card-name">
                             <h2>${photographer.name}</h2>

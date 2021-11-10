@@ -12,8 +12,7 @@ export function displayGallery(galleryData) {
                         <figcaption class="gallery-photo-caption">
                             <h3 class="photo-caption-title">${media.title}</h3>
                             <div class="photo-caption-likes">
-                                <p class="photo-caption-likes-number">${media.likes}</p>                           
-                                <span class="photo-caption-likes-heartIcon" tabindex="0"> ♥ </span>
+                                <p class="photo-caption-likes-number">${media.likes}</p>       
                                 <i class="fas fa-heart photo-caption-likes-heartIcon"></i>
                             </div>
                         </figcaption>
@@ -25,7 +24,7 @@ export function displayGallery(galleryData) {
             photographeGalleryDOM += `
 
                     <figure class="gallery-card gallery-photo" id="${media.id}">
-                        <video class="lightbox-link" src="img/${media.photographerId}/${media.video}" alt="${media.alt}" id="${media.id}" tabindex="0">
+                        <video class="lightbox-link" src="pictures/${media.photographerId}/${media.video}" alt="${media.alt}" id="${media.id}" tabindex="0">
                             <source src="pictures/${media.photographerId}/${media.video}" type="video/mp4" alt="${media.alt}">
                             Your browser does not support the video tag.
                         </video> 
