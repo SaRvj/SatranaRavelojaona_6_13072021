@@ -89,7 +89,7 @@ function closeModalForm() {
 // validation des fonctions
 
 // prénom
-function nameInputValidation() {
+function firstnameInputValidation() {
     const firstname = document.getElementById("firstname");
     const nameError = document.getElementById("firstname-error-message");
     if (firstname.value.length < 2 || firstname.value === "") {
