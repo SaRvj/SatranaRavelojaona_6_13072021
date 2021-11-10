@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a :hover {
+  color: black;
+}
+a :visited {
+  text-decoration: none;
+}
+
+/*bouton*/
+.button {
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #901c1c;
+  color: #ffffff;
+  padding: 1rem 0.5rem;
+  height: 3rem;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1em;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.button :hover, .button :focus {
+  background: #db8876;
+  color: black;
+}
+
+/*tag*/
+.nav-photographer-categories ul li a,
+.photographer-card-tags li a,
+.banner-infos-tags li a {
+  border: 0.03125rem solid #c4c4c4;
+  border-radius: 0.6875rem;
+  padding: 0.05rem 0.3rem;
+  margin: 0.1rem;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  color: #901c1c;
+}
+
+.nav-photographer-categories ul li .selected-tag,
+.photographer-card-tags li .selected-tag,
+.banner-infos-tags li .selected-tag {
+  background-color: #901c1c;
+  color: white;
+}
+
+/*# sourceMappingURL=base.css.map */

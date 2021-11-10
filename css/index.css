@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* règles global */
+/*display flex*/
+header,
+main,
+.nav-photographer-categories ul,
+.photographers-cards,
+.photographer-card-tags {
+  display: flex;
+}
+
+/*particularités -Particularities - de haut en bas*/
+header {
+  width: 60%;
+  justify-content: space-between;
+  margin: 4rem 7rem;
+}
+
+.logo-fisheye {
+  width: 12.5rem;
+  height: 3.125rem;
+}
+
+.nav-photographer-categories ul {
+  justify-content: center;
+  padding-top: 3%;
+}
+
+main {
+  margin: 5rem 7rem;
+  justify-content: center;
+}
+
+#index-page-staticBox {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  padding: 0.4rem;
+  font-weight: 500;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  background-color: #db8876;
+}
+#index-page-staticBox :hover, #index-page-staticBox :focus {
+  background-color: #901c1c;
+  color: white;
+}
+
+h1 {
+  position: absolute;
+  right: 7rem;
+  top: -0.5rem;
+  color: #911c1c;
+  font-size: 2em;
+  line-height: 2em;
+  color: #901c1c;
+}
+
+.photographers-cards {
+  /* margin: auto; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photographer-card {
+  width: 15rem;
+  height: 17rem;
+  margin: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.photographer-card-picture img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0.05rem 0.05rem 1rem grey;
+  height: 12.5rem;
+  width: 12.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photographer-card-name h2 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  min-width: 1px;
+  color: #d3573c;
+}
+
+.photographer-card-location {
+  font-size: 0.8em;
+  line-height: 1em;
+  color: #901c1c;
+}
+
+.photographer-card-tagLine {
+  font-size: 0.6em;
+  line-height: 1em;
+  color: black;
+}
+
+.photographer-card-price {
+  font-size: 0.5em;
+  line-height: 1em;
+  color: #525252;
+}
+
+.photographer-card-location,
+.photographer-card-tagLine,
+.photographer-card-price,
+.photographer-card-tags {
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.photographer-card-tags {
+  justify-content: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  min-width: 1px;
+}
+
+/*# sourceMappingURL=index.css.map */

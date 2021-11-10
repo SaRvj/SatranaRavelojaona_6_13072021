@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 	
-	 	<meta charset="utf-8" />
-	    <title>FishEye Home Page</title>
-	    <meta name="description" content="">
-		<link rel="stylesheet" type="text/css" href="./css/main.css">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
-		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
-		<link rel="shortcut icon" href="./pictures/favicon.ico" type="image/x-icon" />
-		<script src="https://kit.fontawesome.com/3d79397626.js" crossorigin="anonymous"></script>
-	</head>
+  	<head>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#901C1C" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<body>
-		<header>
+		<meta name="keywords" content="photo, photographe" />
+		<meta name="description" content="Site pour photographes indépendants" />
+		<meta name="author" content="Satrana Ravelojaona" />
 
-			<a id="content" href="#main-section" aria-label="Go to content">
-				<p>Passer au contenu</p>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/mediaqueries.css" />
+
+		<link 
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" 
+			rel="stylesheet"
+		/> 
+
+		<link rel="icon" type="image/svg" href="pictures/favicon.ico" />
+
+		<title>FishEye</title>
+  	</head>
+  	<body>
+    	<header>
+			<a href="index.html" class="logo-fisheye" aria-label="Retourne à la page d'acceuil">
+				<img src="pictures/logo/logo.png" alt="Retourner à la page d'acceuil">
 			</a>
+			<nav
+				class="nav-photographer-categories"
+				id="nav-photographer-categories"
+				aria-label="photographer categories"
+				>
+				<ul>
+				<li><a href="#" class='tag' data-name="portrait">#portrait</a></li>
+				<li><a href="#" class='tag' data-name="art">#art</a></li>
+				<li><a href="#" class='tag' data-name="fashion">#fashion</a></li>
+				<li><a href="#" class='tag' data-name="architecture">#architecture</a></li>
+				<li><a href="#" class='tag' data-name="travel">#travel</a></li>
+				<li><a href="#" class='tag' data-name="sport">#sport</a></li>
+				<li><a href="#" class='tag' data-name="animals">#animals</a></li>
+				<li><a href="#" class='tag' data-name="events">#events</a></li>
+				</ul>
+			</nav>
+    	</header>
 
-			<div id="sub-header" aria-label="sub header">
+    	<main>
+			<h1>Nos photographes</h1>
 
-				<a id="logo" href="index.html" aria-label="FishEye Logo">
-					<img alt="Logo FishEye - Aller sur la page d'accueil" src="./pictures/logo/logo.png">
-				</a>
+			<section
+				id="section-photographers-cards"
+				class="photographers-cards"
+			></section>
 
-				<nav aria-label="photographer categories">
-					<a class="allTags" href="#" aria-label="tags">#All</a>
-					<a class="tagportrait" href="#" aria-label="tags">#Portrait</a>
-					<a class="art" href="#" aria-label="tags">#Art</a>
-					<a class="fashion" href="#" aria-label="tags">#Fashion</a>
-					<a class="architecture" href="#" aria-label="tags">#Architecture</a>
-					<a class="travel" href="#" aria-label="tags">#Travel</a>
-					<a class="sports" href="#" aria-label="tags">#Sports</a>
-					<a class="animals" href="#" aria-label="tags">#Animals</a>
-					<a class="events" href="#" aria-label="tags">#Events</a>
-				</nav>
+			<!-- box static -->
+			<a href="#" id="index-page-staticBox">Passer au contenu</a>
+    	</main>
 
-				<h1 id="Our-Photographers" aria-label="Our photographers">Nos photographes</h1>
+    	<script type="module" src="index.js"></script>  
 
-			</div>
-		</header>
-		<!--section pour les cartes photographes-->
-		<main id="main-section" aria-label="Main section"></main>
-		
-		<script src="js/ClassPhotographer.js"></script>
-		<script src="js/init.js"></script>
-		<script src="js/principalp.js"></script>
-		<script src="js/mediaFactoryMethod.js"></script>
-		<script src="js/sortingContent.js"></script>
-		
-	</body>
+  	</body>
+  
 </html>

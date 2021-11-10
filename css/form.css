@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/*keyframes*/
+@-webkit-keyframes lightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*modal formulaire de contact*/
+.contact-form {
+  margin: 5rem auto;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 30rem;
+  -webkit-animation-name: modalopen;
+  animation-name: modalopen;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  background: #db8876;
+  box-shadow: 0.05rem 0.05rem 1rem #525252;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  position: relative;
+}
+.contact-form-title {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+.contact-form-datainput, .contact-form-data textarea {
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: 3px solid #ffffff;
+}
+.contact-form-datatextarea {
+  resize: none;
+}
+
+.text-input {
+  height: 3rem;
+}
+
+.text-input,
+.text-textArea {
+  width: 100%;
+  font-size: 1.3em;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 0.8em;
+}
+
+/* message d'erreur */
+.error-message {
+  font-size: 0.7em;
+  color: #901c1c;
+  font-weight: bold;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  text-align: right;
+  line-height: 0.3;
+  transition: 0.3s;
+}
+
+/* bouton fermer */
+.contact-form-closeBtn {
+  position: absolute;
+  right: 1.5rem;
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  cursor: pointer;
+}
+.contact-form-closeBtn :before :after {
+  position: absolute;
+  left: 10px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.contact-form-closeBtn :before {
+  transform: rotate(45deg);
+}
+.contact-form-closeBtn :after {
+  transform: rotate(-45deg);
+}
+
+/*message de succès*/
+.submit-validation {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  min-height: 25rem;
+}
+.submit-validation p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+
+.btn-close-message {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1rem 0 1rem;
+}
+
+/*# sourceMappingURL=form.css.map */

@@ -1,41 +1,32 @@
-@import "../utils/mixins.scss";
-
+*{
+    box-sizing: border-box !important;
+}
+  
+html{
+    scroll-behavior: smooth;
+}
+  
 body{
-	width: 100%;
-	// max-width: 1300px;
-	// min-width: 495px;
-	// margin: auto;
-	background-color: white;
-	font-family: 'DM Sans', Arial, Verdana, sans-serif;
-	padding: 5px;
-	margin: 0;
-	// padding: 0;
-	font-size: 14px;
-	font-weight: 400;
-	font-style: normal;
-	line-height: 1.5;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    position: relative;
 }
-
-a{
-	text-decoration: none;
-	color: black;
-}
-
+  
 main{
-	@include just-flex;
-	width: 100%;
-	padding: 25px;
-	@include flex-wrap;
-	margin: auto;
-	@include justify-content-center;
-	@include tablet-style{
-		@include justify-content-space-around;
-	}
-	@include mobile-style{
-		padding-top: 0px;
-	}
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-	font-weight: lighter;
+//enlève les traits des liens
+a{
+    color: black;
+    text-decoration: none;
+    :hover{
+        color: black;
+    }
+    :visited{
+        text-decoration: none;
+    }
 }

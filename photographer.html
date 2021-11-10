@@ -1,191 +1,199 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 	
-	 	<meta charset="utf-8" />
-	    <title>Page Photographe</title>
-	    <meta name="description" content="">
-		<link rel="stylesheet" type="text/css" href="./css/pagePhotographer.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
-        <link rel="shortcut icon" href="./pictures/favicon.ico" type="image/x-icon" />
-        <script src="https://kit.fontawesome.com/3d79397626.js" crossorigin="anonymous"></script>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#901C1C" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <header>
-            <a id="content" href="#main-section" aria-label="Anchort to Main section"><p>Passer au contenu</p></a>
-            <div id="sub-header" aria-label="sub header">
-                <a id="logo" href="index.html" aria-label="sub header">
-                <img alt="Logo FishEye" src="./pictures/logo/logo.png">
-                </a>
-            </div>
-        
-        </header>
+    <meta name="keywords" content="photo, photographe" />
+    <meta name="description" content="Site pour photographes indépendants" />
+    <meta name="author" content="Satrana Ravelojaona" />
 
-        <main id="main-section" class="main-sec" aria-label="main section">
-            <!--informations sur le photographe: photographer page-->
-            <section class="photographers"  aria-label="Photographers">
-            <div id="left-p-header">
-                <div class="p-infos"  aria-label="Photographer details">
-                    <h1 class="name"  aria-label="Photographer name"></h1>
-                    <p class="city country"  aria-label="Photographer location"></p>
-                    <p class="tagdescription"  aria-label="Photographer tagdescription"></p>
-                    <div class="tags"  aria-label="Photographer tags">
-                    <a class="allTags" href="#">#All</a>            
-                    </div>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/pagePhotographe.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" 
+        rel="stylesheet"
+    /> 
+
+    <link rel="icon" type="image/svg" href="pictures/favicon.ico" />
+    <script src="https://kit.fontawesome.com/3d79397626.js" crossorigin="anonymous"></script>
+
+    <title>FishEye - page photographe</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-fisheye" aria-label="Retourne à la page d'acceuil">
+        <img src="pictures/logo/logo.png" alt="Retourner à la page d'acceuil">
+    </a>
+    </header>
+
+    <main id="main-content" aria-hidden='false'>
+
+        <section class="photographer-page-banner">
+
+            <article>
+
+                <div class="banner-infos" id="div-banner-photographer-info">
                 </div>
-                <button type="button" class="p-contact button-type" title="Contact Me">Contactez-moi</button>
-            </div>
-            <div class="right-p-header ID">
-                <img src="#" alt="" class="portrait">
-            </div>
-            </section>
 
-            <!--1e modal: contact-->    
-            <div class="bground"  aria-label="Modal" aria-hidden="true" role="dialog">
-                <div class="content">
-                    <p>Contactez-moi</p><br>
-                    <p class="name modal-name"  aria-label="Photographer name"></p>
-                    <span class="close" title="Close contact form" tabindex="0"  aria-label="close modal"></span>
-                    <div class="modal-body"  aria-label="modal body">
+                <button class="banner-contactBtn button" id="contact-modal-form-launchBtn">
+                    Contactez-moi
+                </button>
 
-                        <!--formulaire contact--> 
-                        <form
-                            class = "modal-form"
-                            name="contact"
-                            action="photographer.html"
-                            method="get"
-                            onsubmit="validate();">
+            </article>
 
-                            <!--prénom--> 
-                            <div class="formData">
-                                <label for="first" >Prénom</label><br>
-                                <input
-                                    class="text-control last"
-                                    type="text"
-                                    id="first"
-                                    name="first"
-                                    aria-label="Votre prénom"
-                                    minlength="2" 
-                                    required
-                                /><br>                
-                            </div>
-                
-                            <!--nom--> 
-                            <div class="formData">
-                                <label for="last" >Nom</label><br>
-                                <input
-                                    class="text-control last"
-                                    type="text"
-                                    id="last"
-                                    name="last"
-                                    aria-label="Votre Nom"
-                                    minlength="2" 
-                                    required
-                                /><br>                
-                            </div>
+            <aside class="banner-profilePicture" id="aside-banner-profile-picture">
+            </aside>
 
-                            <!--email--> 
-                            <div class="formData">
-                                <label for="email" >Email</label><br>
-                                <input
-                                    class="text-control email"
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    aria-label="votre e-mail"
-                                    required
-                                /><br>
-                            </div>
+        </section>
 
-                            <!--message--> 
-                            <div class="formData">
-                                <label for="message" >Votre message</label><br>
-                                <textarea
-                                    class="text-control message"
-                                    id="message"
-                                    name="message"
-                                    aria-label="votre message"
-                                    wrap="soft"
-                                    required
-                                ></textarea><br>
-                            </div>
+        <section class="photographer-page-gallery">
 
-                            <input
-                                class="btn-submit button-type"
-                                type="submit"
-                                aria-label="send"
-                                title= "send"
-                                value="Envoyer"/>
-                        </form>
+            <article class="gallery-filterChoices">
+                <p>Trier par</p>
+
+                <div class="dropdown-menu" id="dropdown-menu-focus">
+                    <button id="dropdown-menu-popularity" type="button" role="button" tabindex="0">
+
+                        Popularité
+
+                        <span class="dropdown-menu-icon" id="dropdown-menu-arrowDown">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+
+                    </button> 
+
+                    <div class="dropdown-content">
+                        <button id="dropdown-menu-date" type="button" role="button" tabindex="0">Date</button>
+                        <button id="dropdown-menu-title" type="button" role="button" tabindex="0">Titre</button>
                     </div>
+
                 </div>
+            </article>
+
+
+            <!-- gallery actuelle -->
+            <article class="gallery-cards" id="article-gallery-cards"></article>
+
+        </section>
+
+        <!-- static box in bottom right -->
+        <div class="photographer-page-staticBox" id="photographer-page-staticBox">
+
+            <div class="photographer-page-likes">
+                <p class="photographer-page-likes-Nbr" id="totalNumberOfLikes"></p>
+                <i class="fas fa-heart photographer-page-likes-heartIcon"></i>
             </div>
 
-            <!--2e modal: confirmation--> 
-            <div class="bground2" role="dialog">
-                <div class="content2">
-                    <div class="modal-body2">
-                        <p>Merci !<br><br>Votre message<br>a été envoyé.</p>
+            <span class="photographer-page-PricePerDay">
+                <span class="photographer-page-PriceNbr" id="photographer-page-PriceNbr"></span> € /jour
+            </span>
+
+        </div>
+
+    </main>
+
+    <!-- modal Lightbox -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden='true'>
+        <div class="lightbox-background">
+            <div class="lightbox-box">
+
+                <button class="lightbox-close" id="lightbox-closeBtn" title='Fermer la lightbox' aria-label="Fermer">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <button class="lightbox-prev" id="lightbox-prevBtn" aria-label="Précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button class="lightbox-next" id="lightbox-nextBtn" aria-label="Suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="lightbox-container" id="lightbox-container">
+                    <!-- l'image apparait ici -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulaire contact Modal -->
+
+    <div role="form" class="contact-form-bground" id="form-box" aria-hidden='true'>
+        <div class="contact-form">
+
+            <div class="contact-form-title">
+                Contactez-moi <br />
+                <span id="contact-form-photographerName">Photographer Name</span>
+            </div>
+
+            <span class="contact-form-closeBtn" id="closeBtn"></span>
+            <div class="contact-form-modal-body">
+
+                <form name="reserve" action="index.html" method="get" id="form">
+
+                    <!-- prénom -->
+                    <div class="contact-form-data">
+                        <label for="name">Prénom</label><br />
+                        <input class="text-input" type="text" id="name" name="name" minlength="2" maxlength="20" required /><br />
+                        <p class="contact-form-data error-message" id="name-error-message"></p>
                     </div>
-                </div>
-            </div>
 
-            <!--trier par menu déroulant-->
-            <section class="sorting" title="Order by">
-                <label for="sort-by">Trier par</label>
-                <select id="sort-by" class="button-type">
-                    <option value="valeur1" selected >Popularité</option>
-                    <option value="valeur2">Date</option>
-                    <option value="valeur3">Titre</option>
-                </select>       
-            </section>
-
-            <!--section portfolo-->
-            <section class="portfolio"  aria-label="Photographer medias">
-                <!--lightbox modal-->
-                <div class="bground3"  aria-hidden="true" role="dialog">
-                    <div class="content3" aria-label="image closeup view" role="dialog">
-                        <!--flèche previous image-->
-                        <div class="first-part">
-                            <div class="back" title="Previous image" tabIndex = '0'></div>
-                        </div>
-                        <!--image zoomée-->
-                        <div class="second-part">
-                            <div class="media-ligthbox"></div>
-                            <p id="media-title-ligthbox"></p>
-                        </div>
-                        <!--flèche next image-->
-                        <div class="third-part">
-                            <div class="close" title="Close dialog" tabindex="0"></div>
-                            <div class="next" title="Next image" tabIndex = '0'></div>
-                        </div>
+                    <!-- nom -->
+                    <div class="contact-form-data">
+                        <label for="name">Nom</label><br />
+                        <input class="text-input" type="text" id="name" name="name" minlength="2" maxlength="20" required /><br />
+                        <p class="contact-form-data error-message" id="name-error-message"></p>
                     </div>
+
+                    <!-- email -->
+                    <div class="contact-form-data">
+                        <label for="email">E-mail</label><br />
+                        <input class="text-input" type="email" id="email" name="email" maxlength="20" required /><br />
+                        <p class="contact-form-data error-message" id="email-error-message"></p>
+                    </div>
+
+                    <!-- message -->
+                    <div class="contact-form-data">
+                        <label for="message">Votre Message</label><br />
+
+                        <textarea class="text-textArea" id="message" name="communicationText" rows="4" minlength="2"
+                        maxlength="200" required></textarea><br />
+
+                        <p class="contact-form-data error-message" id="message-error-message"></p>
+                    </div>
+
+                    <!-- bouton envoyer -->
+                    <input class="btn-submit button" id="btn-submit" type="submit" value="Envoyer" title='Envoyer le formulaire' aria-label="Envoyer" />
+                </form>
+
+                <!-- message de validation -->
+                <div class="submit-validation" id="validation-message">
+                    <p>Votre message à été envoyé.</p>
+                    <button class="btn-close-message button" id="close-btn-validation-message" title='Fermer le formulaire'
+                        aria-label="Fermer">
+                        Fermer
+                    </button>
                 </div>
-            </section>
-        </main>
 
-        <!--footer-->
-        <footer class="footer">
-            <!--nombre de like-->
-            <div class="Gen-likes">
-                <div class="number-footer"></div>
-                <em class="fas fa-heart icon-heart icon-heart-plain" aria-hidden="true"></em>
             </div>
-            <!--prix-->
-            <p class="price-footer price"></p>
-        </footer>
+        </div>
+    </div>
 
-		<script src="js/ClassPhotographer.js"></script>
-        <script src="js/init.js"></script>
-        <script src="js/photographerPage.js"></script>
-        <script src="js/mediaFactoryMethod.js"></script>
-        <script src="js/sortingContent.js"></script>
-        <script src="js/modalsLightboxes.js"></script>
-        <script src="js/incrementationLikeCalcul.js"></script>
 
-    </body>
+    <script src="js/contact.js" type="module"></script>
+    <script src="js/lightbox.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+
+</body>
+
 </html>
