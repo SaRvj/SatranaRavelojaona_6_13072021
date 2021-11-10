@@ -1,10 +1,10 @@
 //modules
 import {displayPhotographers} from "./js/page.js";
 import {filterPhotographers} from "./js/page.js";
-import {photographerPageGenerator} from "./js/pagephotographers.js";
+import {photographerPage} from "./js/pagephotographers.js";
 import {displayGallery} from "./js/gallery.js";
 import {sortGallery} from "./js/sorting.js";
-import {likesIncrement} from "./js/likesIncrement.js";
+import {likeIncrement} from "./js/likesIncrement.js";
 
 //main
 fetch("./data/FishEyeData.json")
@@ -29,10 +29,10 @@ fetch("./data/FishEyeData.json")
       let filteredDataPhotographers = photographersData.filter(photographer => photographer.id == urlName);
       let filteredDataMedia = mediaData.filter(media => media.photographerId == urlName);
 
-      photographerPageGenerator(filteredDataPhotographers[0])
+      photographerPage(filteredDataPhotographers[0])
       displayGallery(filteredDataMedia)
       sortGallery(filteredDataMedia);
-      likesIncrement(filteredDataMedia);
+      likeIncrement(filteredDataMedia);
 
       return false
     }
