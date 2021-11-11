@@ -46,6 +46,20 @@
 .contact-form-data textarea {
   resize: none;
 }
+.contact-form-bground {
+  /* for seeing modal : set to block */
+  display: none;
+  /* for not show modal : set to none */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.774);
+  box-shadow: 0.05rem 0.05rem 1rem grey;
+  transition: 0.3s;
+}
 
 .text-input {
   height: 3rem;
@@ -127,6 +141,10 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 0 1rem 0 1rem;
+}
+
+.fa-times {
+  color: #fff;
 }
 
 /*# sourceMappingURL=form.css.map */
