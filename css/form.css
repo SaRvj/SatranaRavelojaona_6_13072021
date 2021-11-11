@@ -38,12 +38,12 @@
   margin-bottom: 1rem;
   color: #000000;
 }
-.contact-form-datainput, .contact-form-data textarea {
+.contact-form-data input, .contact-form-data textarea {
   padding: 1rem;
   border-radius: 0.2rem;
   border: 3px solid #ffffff;
 }
-.contact-form-datatextarea {
+.contact-form-data textarea {
   resize: none;
 }
 
@@ -88,7 +88,7 @@
   opacity: 1;
   cursor: pointer;
 }
-.contact-form-closeBtn :before :after {
+.contact-form-closeBtn :before, .contact-form-closeBtn :after {
   position: absolute;
   left: 10px;
   content: " ";
