@@ -40,7 +40,7 @@ main {
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   background-color: #db8876;
 }
-#index-page-staticBox :hover, #index-page-staticBox :focus {
+#index-page-staticBox:hover, #index-page-staticBox:focus {
   background-color: #901c1c;
   color: white;
 }

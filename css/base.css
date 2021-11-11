@@ -14,11 +14,6 @@ body {
   position: relative;
 }
 
-img {
-  height: 50px;
-  width: 200px;
-}
-
 main {
   margin: 0;
   padding: 0;
@@ -50,9 +45,14 @@ a :visited {
   text-align: center;
   cursor: pointer;
 }
-.button:hover, .button:focus {
+.button :hover, .button :focus {
   background: #db8876;
   color: black;
+}
+
+#logo {
+  height: 50px;
+  width: 200px;
 }
 
 /*tag*/
