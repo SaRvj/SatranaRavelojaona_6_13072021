@@ -39,7 +39,7 @@ export function displayPhotographers(photographersData) {
   
         document.addEventListener("click", (event) => {
   
-            if (event.target.className === "tag") {
+            if (event.target.className === "tag"||event.target.className === "tag selected-tag") {
                 selectedTag = event.target?.dataset?.name;
                 specificPhotographer(selectedTag)
                 tagStylisation(selectedTag)
@@ -55,19 +55,53 @@ export function displayPhotographers(photographersData) {
                 let tag = element.dataset.name;
         
                 if (tag === selectedTag) {
-                element.classList.add("selected-tag")
+                    if (element.classList.contains("selected-tag")){
+                        element.classList.remove("selected-tag")
+                
+                    } else{
+                        element.classList.add("selected-tag")
+                
+                    }
+                    
                 } else {
-                element.classList.remove("selected-tag")
+                    element.classList.remove("selected-tag")
                 }
             });
         }
   
         function specificPhotographer(tagName) {
-  
+            console.log (tagName);
             let filterResult = [];
-  
+            let tagSelected = document.querySelector('.tag.selected-tag');
+            if (tagSelected == null){
+                tagSelected = '';
+                filterResult = photographersData.filter(photographer => photographer.tags.includes(tagName));
+            } else {
+                
+
+    
+            let dataName = tagSelected.getAttribute('data-name');
+            console.log (dataName);
+            console.log (tagSelected);
+            if (tagName == dataName){
+                fetch("./data/FishEyeData.json")
+
+                .then((response) => {
+                    if (!response.ok) {
+                    throw new Error("HTTP error, status = " + response.status);
+                    }
+                    return response.json();
+                })
+
+                .then((data) => {
+                filterResult = data.photographers;
+                });
+    
+            } else {
+                filterResult = photographersData.filter(photographer => photographer.tags.includes(tagName));
+            }
             filterResult = photographersData.filter(photographer => photographer.tags.includes(tagName));
-  
+        }
             // relance la fonction d'affichage mais avec seulement les filtrés
             return displayPhotographers(filterResult);
     }
