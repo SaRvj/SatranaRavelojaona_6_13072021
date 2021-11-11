@@ -50,7 +50,7 @@ a :visited {
   text-align: center;
   cursor: pointer;
 }
-.button :hover, .button :focus {
+.button:hover, .button:focus {
   background: #db8876;
   color: black;
 }

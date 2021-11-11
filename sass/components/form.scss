@@ -35,6 +35,22 @@
             resize: none;
         }
     }  
+    &-bground {
+        /* for seeing modal : set to block */
+        display: none;
+        /* for not show modal : set to none */
+    
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.774);
+        box-shadow: 0.05rem 0.05rem 1rem grey;
+    
+        transition: 0.3s;
+    }
 }
 
 .text-input{
