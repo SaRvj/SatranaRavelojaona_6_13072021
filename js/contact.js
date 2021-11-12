@@ -63,7 +63,7 @@ function LaunchSuccesMessage(event) {
 
 form.addEventListener("submit", LaunchSuccesMessage, true);
 
-// close modal with the succes message
+//ferme la modal avec message de réussite
 document.getElementById("close-btn-validation-message").addEventListener("click", function () {
     closeModalForm()
 });
@@ -125,7 +125,7 @@ function emailInputValidation() {
     if (
         !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(
         email.value
-        ) // Regex format: test@test.com
+        ) // regex: test@test.com
     ) {
         ErrorInputBorder(email);
         emailError.innerHTML = "Veuillez entrer un E-mail valide";

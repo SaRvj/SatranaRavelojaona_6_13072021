@@ -98,7 +98,7 @@ function displayLightbox(index) {
     let id = targetlist[index].getAttribute('id');
 
     // console.log(`${tagName}, ${src}, ${alt}`)
-    // output exemple : IMG, /pictures/930/Sport_Next_Hold.jpg, Climber
+    // exemple donneées de sortie: IMG, /pictures/930/Sport_Next_Hold.jpg, Climber
 
     let lightboxDOM = "";
 

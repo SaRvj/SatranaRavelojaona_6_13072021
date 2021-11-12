@@ -41,8 +41,12 @@ export function displayPhotographers(photographersData) {
   
             if (event.target.className === "tag"||event.target.className === "tag selected-tag") {
                 selectedTag = event.target?.dataset?.name;
+               // if selectedTag = //nonvide{
                 specificPhotographer(selectedTag)
                 tagStylisation(selectedTag)
+               // }else {
+                    //afficher tous les photographes
+                }
             }
   
             return false;;

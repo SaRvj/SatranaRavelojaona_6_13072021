@@ -37,7 +37,7 @@ fetch("./data/FishEyeData.json")
       return false
     }
 
-    // gestion of the button return to top when screen is scrolled
+    //gestion du bouton retour en haut au défilement de l'écran
     window.onscroll = function () {
       const returnToTopBtn = document.getElementById("index-page-staticBox");
 
@@ -49,7 +49,7 @@ fetch("./data/FishEyeData.json")
       setTimeout(function(){ fadeReturnToTopBtn (); }, 5000);
     }
 
-    // Display the main/index page
+    //afficher la page principale/d'index
     filterPhotographers(photographersData);
     return displayPhotographers(photographersData);
   })
