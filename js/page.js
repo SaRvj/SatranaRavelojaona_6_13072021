@@ -41,12 +41,8 @@ export function displayPhotographers(photographersData) {
   
             if (event.target.className === "tag"||event.target.className === "tag selected-tag") {
                 selectedTag = event.target?.dataset?.name;
-               // if selectedTag = //nonvide{
                 specificPhotographer(selectedTag)
                 tagStylisation(selectedTag)
-               // }else {
-                    //afficher tous les photographes
-                }
             }
   
             return false;;
@@ -81,9 +77,6 @@ export function displayPhotographers(photographersData) {
                 tagSelected = '';
                 filterResult = photographersData.filter(photographer => photographer.tags.includes(tagName));
             } else {
-                
-
-    
             let dataName = tagSelected.getAttribute('data-name');
             console.log (dataName);
             console.log (tagSelected);
@@ -106,7 +99,8 @@ export function displayPhotographers(photographersData) {
             }
             filterResult = photographersData.filter(photographer => photographer.tags.includes(tagName));
         }
-            // relance la fonction d'affichage mais avec seulement les filtrés
-            return displayPhotographers(filterResult);
+        // relance la fonction d'affichage mais avec seulement les filtrés
+        return displayPhotographers(filterResult);
     }
-  }
+    
+}

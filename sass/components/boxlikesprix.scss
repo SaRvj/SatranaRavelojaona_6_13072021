@@ -1,0 +1,18 @@
+@media screen and (min-width: 950px){
+    .box-info{
+        position: fixed;
+        display: flex;
+        gap: 65px;
+        bottom: 0;
+        right: 35px;
+        background-color: $salmon;
+        border-radius: $borderRadius $borderRadius 0 0;
+        padding: 20px 30px;
+        font-size: 1.5rem;
+        font-weight: 500;
+    
+        .nbrLike{
+            margin-right: 15px;
+        }
+    }
+}
