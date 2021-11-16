@@ -1,4 +1,4 @@
-import Error from './error'
+import Error from './error.js'
 
 /**
  *simule une api, elle devra être modifié une fois l'api créé

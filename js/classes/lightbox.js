@@ -42,7 +42,7 @@ export default class LightBox {
         btnClose.setAttribute('class', 'close')
         btnClose.setAttribute('aria-label', 'fermer la vue rapproché')
         btnClose.innerHTML = `<i class="fas fa-times"></i>`
-        this.btnClose = cbtnClose
+        this.btnClose = btnClose
         btnClose.addEventListener('click', () => this.close())
 
 
@@ -124,13 +124,13 @@ export default class LightBox {
             media = document.createElement('img')
             media.setAttribute('class', 'media')
             media.setAttribute('alt', this.current.alt)
-            media.src = `imgs/photos/${this.current.photographerId}/` + this.current.img
+            media.src = `pictures/image/${this.current.photographerId}/` + this.current.img
         }else{
             media = document.createElement('video')
             media.setAttribute('class', 'media')
             media.setAttribute('controls', 'true')
 
-            media.innerHTML = `<source src="imgs/photos/${this.current.photographerId}/${this.current.video}" type="video/mp4">`
+            media.innerHTML = `<source src="pictures/image/${this.current.photographerId}/${this.current.video}" type="video/mp4">`
         }
         this.media = media
         return media

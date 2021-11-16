@@ -1,5 +1,5 @@
-import Contact from "./Contact";
-import Tag from "./Tag";
+import Contact from "./Contact.js";
+import Tag from "./Tag.js";
 
 export default class photographer {
     constructor(data) {
@@ -32,7 +32,7 @@ export default class photographer {
             case "index.html":
                 return this.mini()
                 break;
-            case "photographer.html":
+            case "photographer-page.html":
                 return this.profilPhotographer()
                 break;
             default:
@@ -49,7 +49,7 @@ export default class photographer {
         element.setAttribute('class', 'photographer-mini')
 
         element.innerHTML =
-        `<a class="photographer__profil" href="photographer.html?id=${this.id}">
+        `<a class="photographer__profil" href="photographer-page.html?id=${this.id}">
             <img class="photographer__profil__img" src="pictures/image/Photographers_ID_Photos/${this.portrait}" alt="">
             <h2 class="photographer__profil__name">${this.name}</h2>
         </a>
@@ -93,7 +93,7 @@ export default class photographer {
         contactBtn.setAttribute('class', 'btn photographer__btn')
         pictureElement.setAttribute('class', 'photographer__img')
         pictureElement.setAttribute('alt', this.name)
-        pictureElement.setAttribute('src', `imgs/photos/Photographers_ID_Photos/${this.portrait}`)
+        pictureElement.setAttribute('src', `pictures/image/Photographers_ID_Photos/${this.portrait}`)
         
         //ajoute du contenu dans l'élément infos
         infosElement.innerHTML=

@@ -1,4 +1,4 @@
-import Media from "./media"
+import Media from "./media.js"
 
 export default class sortDropdown {
     constructor () {

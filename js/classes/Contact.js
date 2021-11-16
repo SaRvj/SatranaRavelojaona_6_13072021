@@ -1,4 +1,4 @@
-import photographer from "./Photographer"
+import photographer from "./Photographer.js"
 
 const modal = document.getElementById('modalForm')
 const contactForm = document.getElementById('contactForm')
@@ -56,7 +56,7 @@ const useKeys = (e) => {
 const init = () => {
 
     //initialise la vue
-    let name = Photographer.instances[0].name
+    let name = photographer.instances[0].name
     let formulaire = document.getElementById('contactForm')
     document.getElementById('form-add').innerHTML += name
 
@@ -66,7 +66,7 @@ const init = () => {
         e.preventDefault()
 
         if(validateForm(validValidation)){
-            let data = new FormData(contactForm) // Contient les données du formulaire validé
+            let data = new FormData(contactForm) // contient les données du formulaire validé
 
             //console.loger des données du formulaire
             console.group('Données du formulaire')

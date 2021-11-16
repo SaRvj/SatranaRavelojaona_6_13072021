@@ -1,6 +1,6 @@
-import boxInfo from "./boxInfo"
-import Tag from "./Tag"
-import LightBox from "./lightbox"
+import boxInfo from "./boxInfo.js"
+import Tag from "./Tag.js"
+import LightBox from "./lightbox.js"
 
 export default class Media {
     constructor (data, target) {
@@ -124,7 +124,7 @@ export default class Media {
 
         likeNumber.appendChild(likeNb)
         likeNumber.appendChild(this.defineLikeBtn())
-        footer.appendChild(like)
+        footer.appendChild(likeNumber)
         container.appendChild(media)
         container.appendChild(footer)
 

@@ -1,12 +1,12 @@
 //importe les classes
-import Api from './class/Api.js'
-import Tag from './class/Tag.js'
-import Error from './class/Error.js'
-import photographer from './class/photographer.js'
-import sortDropdown from './class/sortDropdown.js'
-import Media from './class/Media.js'
-import boxInfo from './class/boxInfo.js'
-import Contact from './class/Contact.js'
+import Api from './classes/Api.js'
+import Tag from './classes/Tag.js'
+import Error from './classes/error.js'
+import Photographer from './classes/Photographer.js'
+import sortDropdown from './classes/SortDropDown.js'
+import Media from './classes/media.js'
+import BoxInfo from './classes/boxInfo.js'
+import Contact from './classes/Contact.js'
 
 //éléments du DOM
 const photographerTarget = document.getElementById('photographer-profil')
@@ -44,7 +44,7 @@ try {
 }
 
 //configure le comportement des tags sur la page
-Tag.config({
+Tag.configTag({
     oneAtTime: true,
     callback: () => { Media.defineVisbilityFromFilters() }
 })
@@ -55,10 +55,10 @@ Tag.config({
     const photographerId = getParam('id')
 
     //crée des éléments sur le DOM
-    let photographer = new photographer(Api.takePhotographerById(photographerId))
+    let photographer = new Photographer(Api.takePhotographerById(photographerId))
 
     //injecte sur le DOM
-    photographer.instances.forEach(i => {
+    Photographer.instances.forEach(i => {
         injectElement(i.element, photographerTarget)
     })
 
@@ -83,7 +83,7 @@ Tag.config({
 //box info photographe => affiche le prix et total des likes
 
     //crée un élément
-    const boxInfo = new boxInfo(photographer.price)
+    const boxInfo = new BoxInfo(photographer.price)
 
     //injecte sur le DOM
     injectElement(boxInfo.defineView(), boxInfoTarget)

@@ -1,9 +1,9 @@
 //importer les classes
 
-import Api from './class/Api.js'
-import Error from './class/Error.js'
-import Tag from './class/Tag.js'
-import photographer from './class/photographer.js'
+import Api from './classes/Api.js'
+import Error from './classes/error.js'
+import Tag from './classes/Tag.js'
+import photographer from './classes/Photographer.js'
 
 //éléments du DOM
 
@@ -29,7 +29,7 @@ try {
 //tags
 
     //configure du comportement des tags sur la page
-    Tag.config({
+    Tag.configTag({
         oneAtTime: false,
         callback: () => { photographer.defineVisbilityFromFilters() }
     })

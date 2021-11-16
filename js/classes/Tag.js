@@ -27,10 +27,10 @@ export default class Tag {
 
     /**
      * configure le comportement des tags de la pages
-     * @param {string} config 
+     * @param {string} configTag 
      */
-    static configTag = (config) => {
-        for (const [key, value] of Object.entries(config)) {
+    static configTag = (configTag) => {
+        for (const [key, value] of Object.entries(configTag)) {
             switch (key) {
                 case 'oneAtTime':
                     Tag.oneAtTime = value
