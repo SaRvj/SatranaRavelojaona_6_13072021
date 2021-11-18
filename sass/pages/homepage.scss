@@ -4,10 +4,10 @@
 }
 
 .direct-link-pageIndex{
-  position: fixed;
+  position: relative;
   top: -35px;
   left: 50%;
-  width: 187px;
+  //width: 187px;
   padding: 3px 15px;
   border-radius: $borderRadius;
   background-color: $salmon;
@@ -21,8 +21,9 @@
   z-index: 100;
 
   &:focus{
-      top: 6px;
+    top: 6px;
   }
+
 }
 
 .no-photographer{
