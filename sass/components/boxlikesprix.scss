@@ -16,3 +16,18 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    .box-info{
+        position: fixed;
+        display: flex;
+        gap: 30px;
+        bottom: 0px;
+        right: 19px;
+        background-color: $salmon;
+        border-radius: 5px 5px 0 0;
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

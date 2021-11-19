@@ -96,12 +96,27 @@ body.no-scroll {
     margin-right: 15px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .box-info {
+    position: fixed;
+    display: flex;
+    gap: 30px;
+    bottom: 0px;
+    right: 19px;
+    background-color: #DB8876;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
 .form-contact {
   display: none;
   position: fixed;
   inset: 0;
   font-size: 1.5rem;
   overflow-y: auto;
+  z-index: 999;
 }
 .form-contact.open {
   display: block;
@@ -281,6 +296,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   background-color: #FFF;
+  z-index: 999;
 }
 .lightbox.open {
   display: flex;

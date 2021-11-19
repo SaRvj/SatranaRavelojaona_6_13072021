@@ -178,7 +178,7 @@ const controlInputTextarea = (entry, minLength = 1, maxLength) => {
 const validateForm = (entries) => {
     let formCompleted = true
     Object.entries(entries).forEach( ([key, value]) => {
-        if(!value.validate){
+        if(key && !value.validate){
             value.controlFunc()
             formCompleted = false
         }
@@ -194,7 +194,7 @@ const validateForm = (entries) => {
  * @param {string} error 
  */
 const setError = (elem, error) => {
-    let target = NodeList.prototype.isPrototypeOf(elem) ? elem[0].parentNode : elem.parentNode
+    let target = NodeList.prototype.isPrototypeOf.call(elem) ? elem[0].parentNode : elem.parentNode
     while (!target.classList.contains('form__item')) {
         target = target.parentNode
     }
@@ -208,7 +208,7 @@ const setError = (elem, error) => {
  */
 const errorRemove = (elmt) => {
 
-    let target = NodeList.prototype.isPrototypeOf(elmt) ? elmt[0].parentNode : elmt.parentNode
+    let target = NodeList.prototype.isPrototypeOf.call(elmt) ? elmt[0].parentNode : elmt.parentNode
     
     while (!target.classList.contains('form__item')) {
         target = target.parentNode
@@ -217,7 +217,7 @@ const errorRemove = (elmt) => {
     target.removeAttribute("data-error")
 }
 
-
+//initialisation de la modale
 const Contact = {
     init : init,
     open : open,

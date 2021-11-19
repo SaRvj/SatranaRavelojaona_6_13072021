@@ -37,7 +37,7 @@ export default class Media {
 
     /**
      * tri les médias
-     * @param {string} whichOne popularity / date / title
+     * @param {string} whichOne popularité / date / titre
      */
     static sortBy = (whichOne) => {
         let element = [...Media.instances]

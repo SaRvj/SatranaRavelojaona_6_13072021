@@ -31,10 +31,8 @@ export default class photographer {
             case "":
             case "index.html":
                 return this.mini()
-                break;
             case "photographer-page.html":
                 return this.profilPhotographer()
-                break;
             default:
                 break;
         }
@@ -114,7 +112,7 @@ export default class photographer {
         infosElement.appendChild(tagsList)
 
         //ajouter du text dans le bouton de contact
-
+        contactBtn.style.zIndex = "1";
         contactBtn.innerHTML = "Contactez-moi"
 
         //ajoute des éléments au container
@@ -125,6 +123,16 @@ export default class photographer {
 
         //ajoute l'évènement "click" sur le bouton de contact
         contactBtn.addEventListener('click', () => Contact.open())
+
+        // //modal ouverte
+        // contactBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+        // ModalIsOpen = false;
+        // function launchModal(){
+        //     ModalIsOpen = true;
+        //     modalbg.style.display = "block";
+        // }
+        // contactBtn.style.display = "block";
+        // contactBtn.style.display = "none";
 
         return container
     }
