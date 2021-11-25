@@ -45,7 +45,7 @@ export default class sortDropdown {
         let sortList = this.getSortList()
         this.list = sortList
 
-        //crée l'arborescence
+        //crée l'etiquette menu déroulant trier par
         sortRoll.appendChild(sortBtn)
         sortRoll.appendChild(sortList)
 
