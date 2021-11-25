@@ -51,7 +51,7 @@ export default class Media {
                 break;
 
             default:
-                element.sort((a,b) => a.likes - b.likes)
+                element.sort((a,b) => b.likes - a.likes)
                 break;
         }
 
