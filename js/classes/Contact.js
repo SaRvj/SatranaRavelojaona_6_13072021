@@ -72,15 +72,15 @@ const init = () => {
             console.group('Données du formulaire')
             for(let a of data.entries()) { console.log(a[0]+ ' : '+ a[1]) }
             console.groupEnd()
-        
-            //code asynchrone ici à ajouter
             
-
             //à appeller quand l'envoi asynchrone répond par un status 200 Ok
             contactForm.reset()
             Object.values(validValidation).forEach( value => {
                 value.validate = false
             })
+            
+            //ferme la modale contact après envoie des informations valides
+            Contact.close()
         }
     });
 
