@@ -642,20 +642,27 @@ body.no-scroll {
 }
 
 .direct-link-pageIndex {
-  position: relative;
-  top: -35px;
+  display: none;
+  position: fixed;
+  top: 0;
   left: 50%;
+  width: 187px;
   padding: 3px 15px;
   border-radius: 5px;
   background-color: #DB8876;
+  text-align: center;
   font-size: 1.125rem;
   font-weight: 500;
   transform: translate3d(-50%, 0, 0);
   transition: top 0.3s ease;
-  z-index: 100;
+  z-index: 1;
 }
 .direct-link-pageIndex:focus {
   top: 6px;
+}
+.direct-link-pageIndex:hover {
+  background-color: #901C1C;
+  color: white;
 }
 
 .no-photographer {

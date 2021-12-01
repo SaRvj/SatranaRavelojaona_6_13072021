@@ -52,3 +52,20 @@ try {
     photographer.instances.forEach(i => {
         injectElement(i.element, photographerTarget)
     })
+
+
+//affiche direct-link-pageIndex
+function displayLinkPageIndex() {
+    const returnMain = document.querySelector(".direct-link-pageIndex");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+            returnMain.style.display = "block";
+            returnMain.style.opacity = "1";
+        } else {
+            returnMain.style.display = "none";
+            returnMain.style.opacity = "0";
+        }
+    });
+}
+
+displayLinkPageIndex()

@@ -4,24 +4,30 @@
 }
 
 .direct-link-pageIndex{
-  position: relative;
-  top: -35px;
+  display: none;
+  position: fixed;
+  top: 0;
   left: 50%;
-  //width: 187px;
+  width: 187px;
   padding: 3px 15px;
   border-radius: $borderRadius;
   background-color: $salmon;
-
+  text-align: center;
   font-size: 1.125rem;
   font-weight: 500;
 
   transform: translate3d(-50%, 0, 0);
   transition: top .3s ease;
 
-  z-index: 100;
+  z-index: 999;
 
   &:focus{
     top: 6px;
+  }
+
+  &:hover {
+    background-color: $burgundy;
+    color: white;
   }
 
 }
