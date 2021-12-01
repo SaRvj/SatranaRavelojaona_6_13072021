@@ -655,7 +655,7 @@ body.no-scroll {
   font-weight: 500;
   transform: translate3d(-50%, 0, 0);
   transition: top 0.3s ease;
-  z-index: 1;
+  z-index: 999;
 }
 .direct-link-pageIndex:focus {
   top: 6px;
